@@ -9,7 +9,7 @@ public class GroundCollision : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
-            Debug.Log(isGrounded);
+
         }
     }
 
@@ -18,7 +18,7 @@ public class GroundCollision : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
-            Debug.Log(isGrounded);
+
         }
            
     }

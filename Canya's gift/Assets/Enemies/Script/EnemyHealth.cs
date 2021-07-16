@@ -4,13 +4,21 @@ using UnityEngine.Events;
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHP;
-    private int currentHP;
+    [HideInInspector] public int currentHP;
 
     public UnityEvent onDeath;
+
+    public AudioClip EnemyDies;
+
+    //for effect
+    public GameObject effect;
+
+    private AudioSource audioSource;
 
     private void Start()
     {
         currentHP = maxHP;
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -19,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHP <= 0)
         {
             onDeath.Invoke();
-            Destroy(gameObject);
+
         }
     }
 
@@ -28,5 +36,18 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHP -= damage;
 
+    }
+
+    public void PlayDeathSound()
+    {
+        audioSource.PlayOneShot(EnemyDies);
+
+        EnemyDeath();
+    }
+
+    public void EnemyDeath()
+    {
+        Instantiate(effect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
