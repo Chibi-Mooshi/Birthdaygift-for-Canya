@@ -31,6 +31,8 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+
+
     // Update is called once per frame
     public void TakeDamage(int damage)
     {

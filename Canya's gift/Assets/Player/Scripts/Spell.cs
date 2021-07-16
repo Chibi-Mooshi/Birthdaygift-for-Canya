@@ -20,7 +20,6 @@ public class Spell : MonoBehaviour
     [Header("Offense spells")]
     public float speed = 20f;
     public int damage = 40;
-    public int pushBackForce = 1;
     [Space(10)]
 
     [Header("Defense spells")]
@@ -62,13 +61,6 @@ public class Spell : MonoBehaviour
             EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
-               
-
-                //force backwards
-                var enemyPositon = enemyHealth.GetComponent<GameObject>();
-                Vector2 pushDirection = transform.InverseTransformDirection(enemyPositon.transform.position - this.transform.position);
-                enemyPositon.transform.Translate(pushDirection * pushBackForce * Time.deltaTime);
-              
                  enemyHealth.TakeDamage(damage);
                 Instantiate(endEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
