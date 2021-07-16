@@ -12,6 +12,7 @@ public class Dialogue : ScriptableObject
         public Sprite myImage;
         [TextArea(4, 8)]
         public string myText;
+        public AudioClip myVoice;
 
         public UnityEvent dialogueEvent;
 
