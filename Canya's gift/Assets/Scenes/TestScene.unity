@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130365284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.228058, y: 1.5784835, z: 58.908615}
+  m_LocalPosition: {x: -6.228058, y: 0.59, z: 58.908615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1821650889}
@@ -254,7 +254,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.95, y: 2.690657}
+    oldSize: {x: 4.92, y: 2.65}
     newSize: {x: 4.95, y: 2.690657}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -303,7 +303,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3407830929334995445, guid: 165c5cd01cb116a4085cc563b7c96419, type: 3}
+  m_Sprite: {fileID: -1347532211411968617, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.378394
       objectReference: {fileID: 0}
+    - target: {fileID: 5788395454635287597, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7645372005702169758, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
     - target: {fileID: 5788395454635287599, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
       propertyPath: m_Name
       value: Ground_and_background_2 (3)
@@ -528,6 +532,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.378394
       objectReference: {fileID: 0}
+    - target: {fileID: 5788395454635287597, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7645372005702169758, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
     - target: {fileID: 5788395454635287599, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
       propertyPath: m_Name
       value: Ground_and_background_2 (5)
@@ -2107,6 +2115,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.378394
       objectReference: {fileID: 0}
+    - target: {fileID: 5788395454635287597, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7645372005702169758, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
     - target: {fileID: 5788395454635287599, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
       propertyPath: m_Name
       value: Ground_and_background_2 (2)
@@ -2198,7 +2210,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.95, y: 2.690657}
+    oldSize: {x: 4.92, y: 2.65}
     newSize: {x: 4.95, y: 2.690657}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2247,7 +2259,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3407830929334995445, guid: 165c5cd01cb116a4085cc563b7c96419, type: 3}
+  m_Sprite: {fileID: -1347532211411968617, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2887,6 +2899,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.378394
       objectReference: {fileID: 0}
+    - target: {fileID: 5788395454635287597, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7645372005702169758, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
     - target: {fileID: 5788395454635287599, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
       propertyPath: m_Name
       value: Ground_and_background_2 (4)
@@ -3152,6 +3168,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.378394
       objectReference: {fileID: 0}
+    - target: {fileID: 5788395454635287597, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7645372005702169758, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
     - target: {fileID: 5788395454635287599, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
       propertyPath: m_Name
       value: Ground_and_background_2 (1)
@@ -3878,6 +3898,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.378394
       objectReference: {fileID: 0}
+    - target: {fileID: 5788395454635287597, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7645372005702169758, guid: 4790fd16ed0b1504095bb3aecac4be0a, type: 3}
     - target: {fileID: 5788395454635287599, guid: 76540870e604dde4f854d8e2357727a4, type: 3}
       propertyPath: m_Name
       value: Ground_and_background_2
