@@ -2,19 +2,18 @@ using UnityEngine;
 
 public class GroundedEnemyMovement : MonoBehaviour
 {
-    public float speed;
+   [Tooltip("How fast should enemy move?")] public float speed;
 
-    public float changeTime;
+   [Tooltip("How long should pass before enemy changes direction?")] public float changeTime;
+
+   [Tooltip("Player will appear here in playmode")] public Transform target;
+
+   [Tooltip("How far should the enemy see?")] public float sightDistance;
+
     float timer;
     int directionSide = 1;
-
-    public Transform target;
-
     public LayerMask playerLayer;
     private Vector2 direction;
-
-
-    public float sightDistance;
 
     private void Start()
     {
@@ -23,12 +22,9 @@ public class GroundedEnemyMovement : MonoBehaviour
         timer = changeTime;
     }
 
-
     private void Update()
     {
         transform.Translate(new Vector2(directionSide, 0) * speed * Time.deltaTime);
-
-
 
         timer -= Time.deltaTime;
         if (timer < 0)
@@ -38,10 +34,8 @@ public class GroundedEnemyMovement : MonoBehaviour
         }
     }
 
-
     public void FixedUpdate()
     {
-
             //Length of the ray
             float laserLength = sightDistance;
 
@@ -55,22 +49,14 @@ public class GroundedEnemyMovement : MonoBehaviour
                 Debug.Log("Hitting: " + hit.collider.name);
             }
 
-
             //Method to draw the ray in scene for debug purpose
             Debug.DrawRay(transform.position, new Vector2(directionSide, 0) * laserLength, Color.red);
-
-
-        
     }
 
     public void ChasePlayer()
     {
-
         Debug.Log("Player in sight");
 
         transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
     }
-
-
-
 }

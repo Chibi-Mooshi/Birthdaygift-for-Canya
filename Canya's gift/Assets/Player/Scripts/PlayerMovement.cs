@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     //variables for movement
 
     #region public variables
+ 
    [Header("Variables for movement")]
    [Tooltip("How fast should the player move?")] public float moveSpeed;
 
@@ -12,17 +13,15 @@ public class PlayerMovement : MonoBehaviour
 
    [Tooltip("How fast should the player fall after their jump?")]public float drag = -0.1f;
 
+   [Tooltip("What particles should spawn when the player hits the ground after jump")]public GameObject dustJumpEffect;
 
-    private bool spawnDust;
-    public GameObject dustJumpEffect;
+   [Tooltip("Add feetobject here")]public Transform feetPosition;
 
-    public Transform feetPosition;
+   [Tooltip("What particles should spawn when the player walks on ground")] public GameObject walkParticleEffect;
+    
+   [Tooltip("How much time should spawn between walk dust spawning?")] public float delayAmountForWalkdDustEffect;
 
-
-    public GameObject walkParticleEffect;
-    private float timer = 0f;
-    public float delayAmountForWalkdDustEffect;
-
+    [Tooltip("What sound should play when player walks?")] public AudioClip walkSound;
 
     #endregion
 
@@ -32,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private GroundCollision groundCollision;
     private bool canJump;
+
+    private float timer = 0f;
+    private bool spawnDust;
+
+    private AudioSource feetAudioSource;
 
     #endregion
 
@@ -43,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundCollision = GetComponent<GroundCollision>();
 
-        
+        feetAudioSource = GetComponentInChildren<AudioSource>();
     }
 
     private void Update()
@@ -54,21 +58,23 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
         }
 
-
         if (groundCollision.isGrounded)
         {
             if (spawnDust == true)
             {
                 Instantiate(dustJumpEffect, feetPosition.position, Quaternion.identity);
+
+
                 spawnDust = false;
+
+
+                feetAudioSource.PlayOneShot(walkSound);
             }
           
         } else
         {
             spawnDust = true;
         }
-
-
     }
 
 
@@ -97,8 +103,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
-
         //for jumping
         Vector3 force = drag * rb.velocity.normalized * rb.velocity.sqrMagnitude;
         rb.AddForce(force);
@@ -115,5 +119,4 @@ public class PlayerMovement : MonoBehaviour
         rb.transform.localScale = theScale;
         */
     }
-
 }

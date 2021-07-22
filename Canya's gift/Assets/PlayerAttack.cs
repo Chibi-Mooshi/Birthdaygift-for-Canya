@@ -3,28 +3,34 @@ using UnityEngine.Events;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField]private GameObject[] spellPrefab;
 
-    public Transform firePoint;
+    [Tooltip("How fast should the mana go up?")] public float delayAmount;
+    [Tooltip("How much should the mana go up by?")] public int addedManaAmount;
 
-    private int spellIndex;
+    [Tooltip("Insert spells here"),SerializeField]private GameObject[] spellPrefab;
 
-    [Header("For events")]
-    public UnityEvent onKeyPress;
-    public UnityEvent onNotEnoughMana;
-    public UnityEvent onCoolDownOngoing;
+    [Tooltip("Add firepoint object here")]public Transform firePoint;
 
-    public int maxMana;
-    private int currentMana;
+    [Tooltip("What should be the max amount of mana the player has?")]public int maxMana;
 
-    public ValueBarData manaData;
 
-    private float timer = 0f;
-    [Tooltip("How fast should the mana go up?")]public float delayAmount;
-    [Tooltip("How much should the mana go up by?")]public int addedManaAmount;
+    [Tooltip("Insert the manabar data here")]public ValueBarData manaData;
 
     [Header("For cooldowns")]
-    [SerializeField] private CoolDownDataHolder[] coolDownHolder;
+    [Tooltip("Insert data for cooldowns here"),SerializeField] private CoolDownDataHolder[] coolDownHolder;
+
+    [Header("For events")]
+   [Tooltip("What should happen when the player presses the button to fire?")] public UnityEvent onKeyPress;
+    [Tooltip("What should happen when there's not enough mana?")]public UnityEvent onNotEnoughMana;
+   [Tooltip("What should happen is a spell is currently in cooldown?")] public UnityEvent onCoolDownOngoing;
+
+  
+    private int currentMana;
+    private int spellIndex;
+
+    private float timer = 0f;
+    
+  
    
     private void Start()
     {

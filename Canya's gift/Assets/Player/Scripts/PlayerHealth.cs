@@ -3,15 +3,16 @@ using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHP;
+   [Tooltip("How much health should the player have?")] public int maxHP;
     [HideInInspector] public int currentHP;
 
+  [Tooltip("Insert data for health here")]  public ValueBarData healthData;
 
-    public UnityEvent onPlayerDeath;
+    [Tooltip("What effect should play when the player takes damage?")]public GameObject takeDamageEffect;
 
-    public ValueBarData healthData;
+    [Tooltip("What should happen when player dies?")]public UnityEvent onPlayerDeath;
 
-    public GameObject takeDamageEffect;
+  
 
     private void Start()
     {

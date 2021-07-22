@@ -9,7 +9,14 @@ public class GroundCollision : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+        }
+    }
 
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
         }
     }
 
@@ -18,10 +25,6 @@ public class GroundCollision : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = false;
-
-        }
-           
+        }   
     }
-
-
 }
