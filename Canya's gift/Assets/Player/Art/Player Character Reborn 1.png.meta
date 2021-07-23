@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 7fa993cf7177e8d478739707f15b88bd
+guid: 7dfd1b54a2e07fb409607eec9545fbd8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -149121225751063789
-    second: Player Character Reborn_0
+      213: -3445163209989338300
+    second: Player Character Reborn 1_0
   - first:
-      213: 8616893278700044585
-    second: Player Character Reborn_1
+      213: 267250200321626955
+    second: Player Character Reborn 1_1
   - first:
-      213: -6960181119091301761
-    second: Player Character Reborn_2
+      213: 4471308376430059646
+    second: Player Character Reborn 1_2
+  - first:
+      213: 1545795394346330753
+    second: Player Character Reborn 1_3
+  - first:
+      213: -5761546256146786777
+    second: Player Character Reborn 1_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Character Reborn_0
+      name: Player Character Reborn 1_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 58
-        width: 172
-        height: 288
+        x: 20
+        y: 55
+        width: 180
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31313a609073eedf0800000000000000
-      internalID: -149121225751063789
+      spriteID: 44b475350525030d0800000000000000
+      internalID: -3445163209989338300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Character Reborn_1
+      name: Player Character Reborn 1_1
       rect:
         serializedVersion: 2
-        x: 214
-        y: 58
-        width: 172
-        height: 288
+        x: 205
+        y: 55
+        width: 180
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9210e5068ca559770800000000000000
-      internalID: 8616893278700044585
+      spriteID: b43925824a675b300800000000000000
+      internalID: 267250200321626955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player Character Reborn_2
+      name: Player Character Reborn 1_2
       rect:
         serializedVersion: 2
-        x: 409
-        y: 58
-        width: 172
-        height: 288
+        x: 390
+        y: 55
+        width: 180
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +174,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f72ae281628786f90800000000000000
-      internalID: -6960181119091301761
+      spriteID: e70a75247474d0e30800000000000000
+      internalID: 4471308376430059646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character Reborn 1_3
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 55
+        width: 200
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18aa27f98b4c37510800000000000000
+      internalID: 1545795394346330753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character Reborn 1_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 55
+        width: 190
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726936db430ea00b0800000000000000
+      internalID: -5761546256146786777
       vertices: []
       indices: 
       edges: []
