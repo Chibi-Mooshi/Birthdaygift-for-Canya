@@ -4119,6 +4119,10 @@ PrefabInstance:
       propertyPath: actionBarSpellHolder
       value: 
       objectReference: {fileID: 11400000, guid: 940e4b95fd8087a45a8fc3bc0da3e948, type: 2}
+    - target: {fileID: 7183373667115828614, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8616893278700044585, guid: 7fa993cf7177e8d478739707f15b88bd, type: 3}
     - target: {fileID: 7183373667115828615, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
       propertyPath: m_RootOrder
       value: 7
