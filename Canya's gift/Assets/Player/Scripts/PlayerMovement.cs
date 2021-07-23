@@ -21,7 +21,12 @@ public class PlayerMovement : MonoBehaviour
     
    [Tooltip("How much time should spawn between walk dust spawning?")] public float delayAmountForWalkdDustEffect;
 
+    [Space(10)]
+    [Header("Audio")]
+    [Space(10)]
     [Tooltip("What sound should play when player walks?")] public AudioClip walkSound;
+    [Tooltip("What sound should play when player jumps?")] public AudioClip jumpSound;
+    [Tooltip("What sound should play when player lands?")] public AudioClip landSound;
 
     #endregion
 
@@ -34,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float timer = 0f;
     private bool spawnDust;
+    private Animator animator;
 
     private AudioSource feetAudioSource;
 
@@ -48,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
         groundCollision = GetComponent<GroundCollision>();
 
         feetAudioSource = GetComponentInChildren<AudioSource>();
+
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -83,6 +91,9 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        //animator
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
         if (moveInput > 0 && !facingLeft)
             reverseImage();
