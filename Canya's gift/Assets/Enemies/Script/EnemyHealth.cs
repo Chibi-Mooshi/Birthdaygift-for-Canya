@@ -3,15 +3,15 @@ using UnityEngine.Events;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHP;
+    [Tooltip("How much health should the enemy have?")] public int maxHP;
     [HideInInspector] public int currentHP;
 
-    public UnityEvent onDeath;
+   [Tooltip("What should happen when the enemy dies?")] public UnityEvent onDeath;
 
-    public AudioClip EnemyDies;
+    [Tooltip("What should the enemy say when they die?")]public AudioClip EnemyDies;
 
     //for effect
-    public GameObject effect;
+    [Tooltip("What effect should spawn when the enemy dies?")]public GameObject deathEffect;
 
     private AudioSource audioSource;
 
@@ -49,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void EnemyDeath()
     {
-        Instantiate(effect, transform.position, Quaternion.identity);
+        Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

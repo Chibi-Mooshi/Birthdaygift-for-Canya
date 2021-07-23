@@ -159,6 +159,10 @@ public class DialogueManager : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             DialogueText.text += letter;
+
+            //for playing voice clip
+            AudioManager.instance.PlayClip(info.myVoice);
+
             yield return null;
         }
         isCurrentlyTyping = false;

@@ -3,9 +3,9 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
 
-    public int damage;
+    [Tooltip("How much should the enemy damage the player?")]public int damage;
 
-    public float timer;
+   [Tooltip("How long should pass between enemy attacks?")] public float timer;
     private bool isReadyToAttack;
 
     /*
