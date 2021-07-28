@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 
+
 public class SettingManager : MonoBehaviour
 {
 
@@ -36,13 +37,18 @@ public class SettingManager : MonoBehaviour
 
     private AudioSource audioSource;
 
-    private GameSettings gameSettings;
+    public GameSettings gameSettings;
+
+
+
+    //
+    private int resolutionValue;
 
     private void OnEnable()
     {
         audioSource = GameObject.Find("AudioManager").GetComponent<AudioSource>();
 
-        gameSettings = new GameSettings();
+
 
         //onvalueChanged.Addlistener --> whenever vlaue is changed, a listenr will react immediately
         fullScreenToggle.onValueChanged.AddListener(delegate { OnFullscreenToggle(); });
@@ -59,37 +65,34 @@ public class SettingManager : MonoBehaviour
             resolutionDropdown.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
 
-        if (File.Exists(Application.persistentDataPath + "/gamesettings.json") == true)
-        {
-            LoadSettings();
-        }
 
-       // LoadSettings();
+        LoadSettings();
 
     }
 
     public void OnFullscreenToggle()
     {
 
-       gameSettings.fullScreen = Screen.fullScreen = fullScreenToggle.isOn;
+        Screen.fullScreen = fullScreenToggle.isOn;
     }
 
     public void OnResolutionChange()
     {
         Screen.SetResolution(resolution[resolutionDropdown.value].width, resolution[resolutionDropdown.value].height, Screen.fullScreen);
 
-        gameSettings.resolutionsIndex = resolutionDropdown.value;
+        resolutionValue = resolutionDropdown.value;
     }
 
     public void onTextureQualityChange()
     {
-        QualitySettings.masterTextureLimit = gameSettings.textureQuality = texttureQualityDropdown.value;
+        QualitySettings.masterTextureLimit =  texttureQualityDropdown.value;
         
     }
 
     public void OnAudioChange()
     {
-        audioSource.volume = gameSettings.musicVolume = musicVolumeSlider.value;
+        audioSource.volume = musicVolumeSlider.value;
+
     }
 
     public void OnApplyButtonClick()
@@ -99,13 +102,17 @@ public class SettingManager : MonoBehaviour
 
     public void SaveSettings()
     {
-        string jsonData = JsonUtility.ToJson(gameSettings, true);
-        File.WriteAllText(Application.persistentDataPath + "/gameSettings",jsonData);
+        gameSettings.fullScreen = Screen.fullScreen;
+
+        gameSettings.resolutionsIndex = resolutionValue;
+
+        gameSettings.musicVolume = audioSource.volume;
+
+        gameSettings.textureQuality = QualitySettings.masterTextureLimit;
     }
 
     public void LoadSettings()
     {
-        gameSettings = JsonUtility.FromJson<GameSettings>(File.ReadAllText(Application.persistentDataPath + "/gameSettings"));
        
         musicVolumeSlider.value = gameSettings.musicVolume;
         texttureQualityDropdown.value = gameSettings.textureQuality;
@@ -114,6 +121,8 @@ public class SettingManager : MonoBehaviour
 
         resolutionDropdown.RefreshShownValue();
     }
+
+    
 
 
 }
