@@ -41,8 +41,6 @@ public class SceneSoundEffectsManager : MonoBehaviour
 
         timer -= Time.deltaTime;
 
-        Debug.Log("Timer is currently " + timer);
-
         if (timer >= 0)
         {
             PlayRandomSound();

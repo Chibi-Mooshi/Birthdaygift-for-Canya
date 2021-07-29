@@ -9,7 +9,7 @@ public class FlexibleEnemyMovement : MonoBehaviour
     [Tooltip("Player will appear here during in play")] public Transform target;
 
     [Tooltip("How close does the player need to get for the enemy to attack?")]public float chaseRadius;
-    private float sightRange;
+
     private int index;
     private bool playerInSightRange;
   
@@ -20,11 +20,11 @@ public class FlexibleEnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        sightRange = chaseRadius;
+        
 
         if (Vector2.Distance(transform.position, target.position) < chaseRadius)
         {
-            Debug.Log("sight range");
+
             playerInSightRange = true;
         }
         else
@@ -69,7 +69,6 @@ public class FlexibleEnemyMovement : MonoBehaviour
 
     public void ChasePlayer()
     {
-        Debug.Log("Player in sight");
 
         transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
     }
@@ -77,6 +76,6 @@ public class FlexibleEnemyMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, sightRange);
+        Gizmos.DrawWireSphere(transform.position, chaseRadius);
     }
 }

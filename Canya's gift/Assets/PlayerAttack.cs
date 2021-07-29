@@ -30,8 +30,8 @@ public class PlayerAttack : MonoBehaviour
     private Animator animator;
 
     private float timer = 0f;
-    
-  
+
+    private AudioSource audioSource;
    
     private void Start()
     {
@@ -39,6 +39,8 @@ public class PlayerAttack : MonoBehaviour
         manaData.maxValue = maxMana;
 
         animator = GetComponent<Animator>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -98,12 +100,15 @@ public class PlayerAttack : MonoBehaviour
 
        if (spell.manaCost <= manaData.currentValue && coolDownHolder[spellIndex].spellCoolDown <= 0) // && spell.spellCoolDownData.coolDown <= 0)  //spellCoolDownData.coolDown <= 0)
         {
+           
 
             if (spell.spellType == Spell.SpellType.offensive)
             {
                 //animation
                 HandleAttackAnimation();
 
+                //play audio
+                audioSource.PlayOneShot(spell.spellSound);
 
                 Debug.Log("Is casting spell");
 
@@ -113,9 +118,14 @@ public class PlayerAttack : MonoBehaviour
                 //for cooldown
                 coolDownHolder[spellIndex].spellCoolDown = spell.spellCoolDown;
 
+         
+
             } else if (spell.spellType == Spell.SpellType.defensive && playerHealth.currentHP < playerHealth.maxHP)
             {
                 Debug.Log("Is casting spell");
+
+                //play audio
+                audioSource.PlayOneShot(spell.spellSound);
 
                 currentMana -= spell.manaCost;
                 Instantiate(spellPrefab[spellIndex], firePoint.position, firePoint.rotation);
