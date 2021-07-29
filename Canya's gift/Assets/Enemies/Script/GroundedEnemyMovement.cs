@@ -21,7 +21,7 @@ public class GroundedEnemyMovement : MonoBehaviour
 
         timer = changeTime;
     }
-
+/*
     private void Update()
     {
         transform.Translate(new Vector2(directionSide, 0) * speed * Time.deltaTime);
@@ -33,7 +33,7 @@ public class GroundedEnemyMovement : MonoBehaviour
             timer = changeTime;
         }
     }
-
+*/
     public void FixedUpdate()
     {
             //Length of the ray
@@ -45,9 +45,15 @@ public class GroundedEnemyMovement : MonoBehaviour
             //If the collider of the object hit is not NUll
             if (hit.collider != null)
             {
+            ChasePlayer();
+
+
                 //Hit something, print the tag of the object
-                Debug.Log("Hitting: " + hit.collider.name);
-            }
+            Debug.Log("Hitting: " + hit.collider.name);
+            } else
+        {
+           Patrolling();
+        }
 
             //Method to draw the ray in scene for debug purpose
             Debug.DrawRay(transform.position, new Vector2(directionSide, 0) * laserLength, Color.red);
@@ -58,5 +64,17 @@ public class GroundedEnemyMovement : MonoBehaviour
         Debug.Log("Player in sight");
 
         transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
+    }
+
+    public void Patrolling()
+    {
+        transform.Translate(new Vector2(directionSide, 0) * speed * Time.deltaTime);
+
+        timer -= Time.deltaTime;
+        if (timer < 0)
+        {
+            directionSide = -directionSide;
+            timer = changeTime;
+        }
     }
 }

@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
    [Tooltip("What particles should spawn when the player walks on ground")] public GameObject walkParticleEffect;
     
-   [Tooltip("How much time should spawn between walk dust spawning?")] public float delayAmountForWalkdDustEffect;
+   [Tooltip("How much time should spawn between walk dust spawning and walk sound playing?")] public float delayAmountForWalkdDustEffect;
 
     [Space(10)]
     [Header("Audio")]
@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (groundCollision.isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
+            feetAudioSource.PlayOneShot(jumpSound);
+
                 rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
         }
 
@@ -75,8 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
                 spawnDust = false;
 
-
-                feetAudioSource.PlayOneShot(walkSound);
+                feetAudioSource.PlayOneShot(landSound);
             }
           
         } else
@@ -92,6 +93,10 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
+
+
+       
+
         //animator
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
 
@@ -106,10 +111,16 @@ public class PlayerMovement : MonoBehaviour
         {
             if (timer <= 0)
             {
+                if (groundCollision.isGrounded) { 
                 Instantiate(walkParticleEffect, feetPosition.position, Quaternion.identity);
                 timer = delayAmountForWalkdDustEffect;
-            } else
-            {
+
+                var randomVolume = Random.Range(0.1f, 0.9f);
+                feetAudioSource.volume = randomVolume;
+                feetAudioSource.PlayOneShot(walkSound);
+                }
+
+            } else {
                 timer -= Time.deltaTime;
             }
         }

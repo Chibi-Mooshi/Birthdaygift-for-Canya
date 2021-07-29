@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  timer: 0
 --- !u!61 &2674841600241184289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 20
+  currentHP: 0
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -154,7 +156,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   EnemyDies: {fileID: 0}
-  effect: {fileID: 4347495670719806274, guid: df045f555dfa008438562259c92be5b9, type: 3}
+  deathEffect: {fileID: 4347495670719806274, guid: df045f555dfa008438562259c92be5b9, type: 3}
 --- !u!114 &2674841600241184287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,5 +174,5 @@ MonoBehaviour:
   - {x: -2.63, y: 3.82, z: 0}
   - {x: -6.22, y: -0.52, z: 0}
   - {x: -13.4, y: 3.67, z: 0}
-  chaseRadius: 5
   target: {fileID: 0}
+  chaseRadius: 5

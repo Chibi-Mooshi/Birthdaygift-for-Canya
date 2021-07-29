@@ -30,6 +30,9 @@ public class Spell : MonoBehaviour
     public GameObject endEffect;
     public GameObject startEffect;
 
+    [Space(10)]
+    [Header("Sound for spell")]
+    public AudioClip spellSound;
 
     [Header("Events")]
     public UnityEvent onCasting;
