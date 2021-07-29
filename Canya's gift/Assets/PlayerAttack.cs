@@ -27,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
   
     private int currentMana;
     private int spellIndex;
+    private Animator animator;
 
     private float timer = 0f;
     
@@ -36,6 +37,8 @@ public class PlayerAttack : MonoBehaviour
     {
         currentMana = maxMana;
         manaData.maxValue = maxMana;
+
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -77,8 +80,17 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    void HandleAttackAnimation()
+    {
+       
+        
+            animator.SetTrigger("Attack");
+        
+    }
+
    public void CastSpell()
     {
+       
 
         PlayerHealth playerHealth = GetComponent<PlayerHealth>();
 
@@ -89,6 +101,9 @@ public class PlayerAttack : MonoBehaviour
 
             if (spell.spellType == Spell.SpellType.offensive)
             {
+                //animation
+                HandleAttackAnimation();
+
 
                 Debug.Log("Is casting spell");
 
