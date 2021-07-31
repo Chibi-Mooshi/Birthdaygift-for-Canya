@@ -27,7 +27,7 @@ public class DistanceToPlayer : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(playerInSightRange);
+
         if (Vector2.Distance(transform.position, target.position) < chaseRadius)
         {
             

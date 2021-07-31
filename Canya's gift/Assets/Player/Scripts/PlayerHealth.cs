@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHP <= 0)
         {
 
-            Debug.Log("At 0 health");
+
             onPlayerDeath.Invoke();
         }
     }
