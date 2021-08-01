@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5727065213320583543}
   - component: {fileID: 5727065213320583544}
   - component: {fileID: 5727065213320583541}
+  - component: {fileID: 8096638505863843093}
   - component: {fileID: 5727065213320583542}
-  - component: {fileID: 4849590153010554437}
+  - component: {fileID: 1411966153771677875}
   m_Layer: 0
   m_Name: CatObject
   m_TagString: Untagged
@@ -111,34 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
---- !u!114 &5727065213320583542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5727065213320583545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67aa083b9b8772d42b53926f4fd31ec0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onCollisionWithPlayer:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 3b07e1b7053001142bc605245a51d451, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!82 &4849590153010554437
+--- !u!82 &8096638505863843093
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,19 +123,19 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 2.31
-  MinDistance: 0.35
-  MaxDistance: 1.01
+  DopplerLevel: 1
+  MinDistance: 0.74
+  MaxDistance: 5
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -234,3 +208,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5727065213320583542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727065213320583545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67aa083b9b8772d42b53926f4fd31ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCollisionWithPlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3b07e1b7053001142bc605245a51d451, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1411966153771677875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727065213320583545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c64fdff3d645f240a9ea30218c22f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  soundEffects:
+  - {fileID: 8300000, guid: da107f136cdaabb4da662479f631c55c, type: 3}
+  - {fileID: 8300000, guid: 767944e21a0ef4341925c1778400679b, type: 3}
+  - {fileID: 8300000, guid: f23afeb5c44d5ea49aba79f3e774e133, type: 3}
+  minTimer: 1
+  maxTimer: 2
+  minDist: 1
+  maxDist: 20
