@@ -89,8 +89,9 @@ GameObject:
   - component: {fileID: 2187171408830914410}
   - component: {fileID: 2187171408830914409}
   - component: {fileID: 2187171408830914407}
+  - component: {fileID: 3515919112274698631}
   m_Layer: 0
-  m_Name: 'monster '
+  m_Name: WalkingMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,6 +255,25 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &3515919112274698631
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2187171408830914413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31013c03c608ee14ab5f8101365f1e74, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4128056345775281964
 GameObject:
   m_ObjectHideFlags: 0

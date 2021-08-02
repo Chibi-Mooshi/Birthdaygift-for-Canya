@@ -10,17 +10,25 @@ public class FlexibleEnemyMovement : MonoBehaviour
 
     [Tooltip("How close does the player need to get for the enemy to attack?")]public float chaseRadius;
 
+
+
+
     private int index;
     private bool playerInSightRange;
+    private Vector2 direction;
+
+    private Animator animator;
   
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        
+        direction = target.position - transform.position;
 
         if (Vector2.Distance(transform.position, target.position) < chaseRadius)
         {
@@ -54,7 +62,9 @@ public class FlexibleEnemyMovement : MonoBehaviour
     {
            transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
 
-           if (transform.position == positions[index])
+        animator.SetBool("isAttacking", false);
+
+        if (transform.position == positions[index])
            {
                if (index == positions.Length - 1)
                {
@@ -69,8 +79,19 @@ public class FlexibleEnemyMovement : MonoBehaviour
 
     public void ChasePlayer()
     {
+        var spriteRender = GetComponent<SpriteRenderer>();
+
+        if (direction.x > 0f)
+        {
+            spriteRender.flipX = true;
+        } else
+        {
+            spriteRender.flipX = false;
+        }
 
         transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * speed);
+
+        animator.SetBool("isAttacking", true);
     }
 
     private void OnDrawGizmosSelected()

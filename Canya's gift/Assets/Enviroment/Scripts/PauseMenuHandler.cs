@@ -95,7 +95,7 @@ namespace UI
 
             //PauseMenuUI.SetActive(true);
 
-            Time.timeScale -= scaleOfTime;
+            Time.timeScale = 0;
             AudioListener.pause = true;
 
             onGameIsPaused.Invoke();
