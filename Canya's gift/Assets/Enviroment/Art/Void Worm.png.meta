@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: d16b24449aebc454fb26604589c7c62e
+guid: d45fcc255dd47fb4894b386a36c4097b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7488372671791200697
-    second: Talls trees and stumps_0
+      213: 5709768266826822636
+    second: Void Worm_0
   - first:
-      213: 4487026588257186449
-    second: Talls trees and stumps_1
+      213: -8014390735385239431
+    second: Void Worm_1
   - first:
-      213: 3464397669332109876
-    second: Talls trees and stumps_2
+      213: -8931696910827018234
+    second: Void Worm_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Talls trees and stumps_0
+      name: Void Worm_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 48
-        width: 362
-        height: 812
+        x: 70
+        y: 30
+        width: 223
+        height: 504
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7468428eab4f31890800000000000000
-      internalID: -7488372671791200697
+      spriteID: ce3b20eacfb2d3f40800000000000000
+      internalID: 5709768266826822636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Talls trees and stumps_1
+      name: Void Worm_1
       rect:
         serializedVersion: 2
-        x: 369
-        y: 48
-        width: 362
-        height: 812
+        x: 300
+        y: 30
+        width: 223
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1927dc2a8ee154e30800000000000000
-      internalID: 4487026588257186449
+      spriteID: 9706e26961a27c090800000000000000
+      internalID: -8014390735385239431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Talls trees and stumps_2
+      name: Void Worm_2
       rect:
         serializedVersion: 2
-        x: 734
-        y: 54
-        width: 362
-        height: 806
+        x: 533
+        y: 30
+        width: 304
+        height: 334
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43a4b393353041030800000000000000
-      internalID: 3464397669332109876
+      spriteID: 608a3b45bfc3c0480800000000000000
+      internalID: -8931696910827018234
       vertices: []
       indices: 
       edges: []
