@@ -19,7 +19,7 @@ public class Spell : MonoBehaviour
 
     [Header("Offense spells")]
     public float speed = 20f;
-    public int damage = 40;
+    public float damage = 40;
     [Space(10)]
 
     [Header("Defense spells")]

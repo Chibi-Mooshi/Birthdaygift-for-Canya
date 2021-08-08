@@ -110,7 +110,7 @@ public class PlayerAttack : MonoBehaviour
                 //play audio
                 audioSource.PlayOneShot(spell.spellSound);
 
-                Debug.Log("Is casting spell");
+
 
                 currentMana -= spell.manaCost;
                 Instantiate(spellPrefab[spellIndex], firePoint.position, firePoint.rotation);
@@ -143,7 +143,7 @@ public class PlayerAttack : MonoBehaviour
             onCoolDownOngoing.Invoke();
         }
 
-        Debug.Log(spellPrefab[spellIndex].GetComponent<Spell>().manaCost);
+
     }
 
 }

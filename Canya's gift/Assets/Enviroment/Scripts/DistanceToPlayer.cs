@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DistanceToPlayer : MonoBehaviour
 {
+    
     [Tooltip("Player will appear here during in play")] public Transform target;
 
-    [Tooltip("How close does the player need to get for sound to play?")] public float chaseRadius;
+    [Tooltip("What randonm sound clips should play in this level?")]
+    public AudioClip[] soundEffects;
 
-    [Tooltip("What sound should play?")]
-    public AudioClip soundClip;
 
-    private bool playerInSightRange;
+    [Space(10)]
+
+    [Tooltip("How long should minimum pass before a sound is played?")]
+    public float minTimer;
+    [Tooltip("How long should maximum pass before a sound is played?")]
+    public float maxTimer;
+
+
+
     private AudioSource audioSource;
+    public float minDist = 1;
+    public float maxDist = 400;
+
+
+    private int randomSound;
+
+    private float timer;
 
 
     private void Start()
@@ -21,37 +34,55 @@ public class DistanceToPlayer : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
-
+        timer = Random.Range(minTimer, maxTimer);
     }
 
     private void Update()
     {
 
-        Debug.Log(playerInSightRange);
-        if (Vector2.Distance(transform.position, target.position) < chaseRadius)
+        float dist = Vector3.Distance(transform.position, target.position);
+
+        if (dist < minDist)
         {
-            
-            playerInSightRange = true;
+            audioSource.volume = 1;
+        }
+        else if (dist > maxDist)
+        {
+            audioSource.volume = 0;
         }
         else
         {
-            playerInSightRange = false;
+            audioSource.volume = 1 - ((dist - minDist) / (maxDist - minDist));
         }
 
-        if (playerInSightRange && !audioSource.isPlaying)
+
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
         {
-            playSoundClip();
-        } 
+            PlayRandomSound();
+        }
+
+        Debug.Log(timer);
     }
+
+    void PlayRandomSound()
+    {
+        randomSound = Random.Range(0, soundEffects.Length);
+        audioSource.PlayOneShot(soundEffects[randomSound]);
+
+        timer = Random.Range(minTimer, maxTimer);
+    }
+
 
     void playSoundClip()
     {
-        audioSource.PlayOneShot(soundClip);
+        //audioSource.PlayOneShot(soundClip);
     }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, chaseRadius);
+       Gizmos.DrawWireSphere(transform.position, maxDist);
     }
 }

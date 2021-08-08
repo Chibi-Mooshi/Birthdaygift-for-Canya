@@ -21,7 +21,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Is enemy ready to attack " + isReadyToAttack);
+
 
         if (!isReadyToAttack)
         {

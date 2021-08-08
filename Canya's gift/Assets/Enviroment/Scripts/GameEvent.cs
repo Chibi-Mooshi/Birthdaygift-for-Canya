@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameEvent : ScriptableObject
 {
 	[Header("Add description of event")]
-	[TextArea(1, 10)] [SerializeField] string description;
+	[Multiline(10)] [SerializeField] string description;
 
 	private List<GameEventListener> listeners =
 		new List<GameEventListener>();

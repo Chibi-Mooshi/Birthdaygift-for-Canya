@@ -75,6 +75,9 @@ public class GroundedEnemyMovement : MonoBehaviour
         {
             directionSide = -directionSide;
             timer = changeTime;
+            var spriteFlip = GetComponent<SpriteRenderer>();
+
+            spriteFlip.flipX = !spriteFlip.flipX;
         }
     }
 }
