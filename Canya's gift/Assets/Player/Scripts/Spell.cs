@@ -20,6 +20,7 @@ public class Spell : MonoBehaviour
     [Header("Offense spells")]
     public float speed = 20f;
     public float damage = 40;
+    public float timeBeforeDestruction = 10f;
     [Space(10)]
 
     [Header("Defense spells")]
@@ -54,8 +55,19 @@ public class Spell : MonoBehaviour
        
     }
 
+    public void Update()
+    {
+        //for destroying spells after a certain amount of time
+        timeBeforeDestruction -= Time.deltaTime;
+        if (timeBeforeDestruction <= 0 )
+        {
+            Instantiate(endEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject, timeBeforeDestruction);
+        }
 
-   
+       
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -69,11 +81,11 @@ public class Spell : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            if (collision.gameObject.tag == "Ground")
+           /* if (collision.gameObject.tag == "Ground")
             {
                 Instantiate(endEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-            }
+            } */
 
         } else {
 

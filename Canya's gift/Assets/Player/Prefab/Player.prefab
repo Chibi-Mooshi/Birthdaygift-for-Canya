@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7011908145484083347, guid: 165c5cd01cb116a4085cc563b7c96419, type: 3}
+  m_Sprite: {fileID: 267250200321626955, guid: 7dfd1b54a2e07fb409607eec9545fbd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,7 +110,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5500002, y: 2.8807032}
+    oldSize: {x: 1.8, y: 2.95}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -158,10 +158,10 @@ MonoBehaviour:
   dustJumpEffect: {fileID: 2770796333904165846, guid: 81b131cc980f3014ea33579c2157baf3, type: 3}
   feetPosition: {fileID: 7183373667604574000}
   walkParticleEffect: {fileID: 2524679135266687949, guid: 71ebc34af04b4be42bff86fe7788eb00, type: 3}
-  delayAmountForWalkdDustEffect: 1
-  walkSound: {fileID: 0}
-  jumpSound: {fileID: 0}
-  landSound: {fileID: 0}
+  delayAmountForWalkdDustEffect: 2
+  walkSound: {fileID: 8300000, guid: 640730bf311c0e646ab223788722fa46, type: 3}
+  jumpSound: {fileID: 8300000, guid: df9375fe8ef84034cbac5b4ac243ce87, type: 3}
+  landSound: {fileID: 8300000, guid: 359c66b1142d6174eaa521dfedaa9fd0, type: 3}
 --- !u!114 &7183373667115828612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6cda33dc76b6764f9c22a6bed6a3f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayAmount: 1
-  addedManaAmount: 10
+  delayAmount: 0
+  addedManaAmount: 1
   spellPrefab:
   - {fileID: 4722723900273365075, guid: 4872534967145514db728458aa057dd4, type: 3}
   - {fileID: 4722723900273365075, guid: 6f4199b7f8469e943893e4d703bab751, type: 3}
@@ -286,7 +286,7 @@ Animator:
   m_GameObject: {fileID: 7183373667115828666}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad34353cbc2f6f44b9d7af6c0f8cb3bb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

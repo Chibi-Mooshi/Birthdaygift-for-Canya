@@ -258,7 +258,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   EnemyDiesSound: {fileID: 0}
-  deathEffect: {fileID: 4347495670719806274, guid: df045f555dfa008438562259c92be5b9, type: 3}
+  deathEffect: {fileID: 4347495670719806274, guid: 5f125f27fa46709409f2a6f3f2f7e965, type: 3}
   healthBar: {fileID: 8936836384550090047}
   healthCanvas: {fileID: 3543088188117189793}
 --- !u!114 &2674841600241184287

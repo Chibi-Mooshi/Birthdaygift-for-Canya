@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6336424767808329252}
   - component: {fileID: 6336424767808329253}
   - component: {fileID: 6336424767808329259}
+  - component: {fileID: 6066773389063308824}
   m_Layer: 0
-  m_Name: platform 1
-  m_TagString: Untagged
+  m_Name: Orange Platform
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,3 +130,20 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &6066773389063308824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336424767808329255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35800faa2d951247a70b9ecf1628ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 0.01
+  minSpeed: 0.5
+  maxChangeTime: 1
+  minChangeTime: 2
+  directionSide: 1

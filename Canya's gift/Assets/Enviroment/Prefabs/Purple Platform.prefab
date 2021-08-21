@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5304747369278475999}
   - component: {fileID: 5304747369278475998}
   - component: {fileID: 5304747369278475984}
+  - component: {fileID: 1045807680517220329}
   m_Layer: 0
   m_Name: Purple Platform
   m_TagString: Ground
@@ -129,3 +130,20 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &1045807680517220329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304747369278475996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35800faa2d951247a70b9ecf1628ed1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 0.01
+  minSpeed: 0.5
+  maxChangeTime: 1
+  minChangeTime: 2
+  directionSide: 1

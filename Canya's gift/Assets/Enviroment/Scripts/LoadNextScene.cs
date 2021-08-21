@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class LoadNextScene : MonoBehaviour
 {
 
-    [Tooltip("What scene should load? Check build settings"),SerializeField] private int sceneToLoad;
+  
 
     [SerializeField] private UnityEvent onCollisionWithSceneManager;
 
@@ -20,6 +20,6 @@ public class LoadNextScene : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
