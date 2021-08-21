@@ -15,13 +15,15 @@ public class DialogueTrigger : Interactable
             Debug.Log("We got called");
             DialogueManager.Instance.EnqueueDialogue(dialogue[index]);
 
+
+
             if (index < dialogue.Length - 1)
             {
                 index++;
             }
 
             //new code to test
-            if (DialogueManager.Instance.inDialogue && Input.GetKeyDown(KeyCode.Z))
+            if (DialogueManager.Instance.inDialogue && Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.Instance.DequeueDialogue();
             }
