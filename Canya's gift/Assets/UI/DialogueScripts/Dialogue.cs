@@ -9,7 +9,6 @@ public class Dialogue : ScriptableObject
     public class Info
     {
         public string myName;
-        public Sprite myImage;
         [TextArea(4, 8)]
         public string myText;
         public AudioClip myVoice;
