@@ -146,4 +146,4 @@ MonoBehaviour:
   minSpeed: 0.5
   maxChangeTime: 1
   minChangeTime: 2
-  directionSide: 0
+  directionSide: 1

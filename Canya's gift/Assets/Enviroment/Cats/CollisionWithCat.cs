@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Events;
-
 public class CollisionWithCat : MonoBehaviour
 {
     public UnityEvent onCollisionWithPlayer;
@@ -11,7 +10,6 @@ public class CollisionWithCat : MonoBehaviour
 
     [Range(0,5)]
     public float catRadius;
-
 
     private void Start()
     {
@@ -26,21 +24,16 @@ public class CollisionWithCat : MonoBehaviour
         } 
     }
 
-
     private void Update()
     {
         float dist = Vector3.Distance(transform.position, target.position);
 
-
-
         if (dist < catRadius)
         {
             triggerObject.SetActive(true);
-            Debug.Log("is close");
         } else
         {
             triggerObject.SetActive(false);
-            Debug.Log("is not close");
         }
     }
 
@@ -49,8 +42,6 @@ public class CollisionWithCat : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, catRadius);
     }
-
-
 
     public void DestroyObject()
     {

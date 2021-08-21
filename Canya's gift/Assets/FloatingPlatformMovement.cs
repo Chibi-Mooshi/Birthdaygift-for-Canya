@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FloatingPlatformMovement : MonoBehaviour
 {
-
     [SerializeField] private float maxSpeed;
     [SerializeField] private float minSpeed;
-
 
     public float maxChangeTime;
     public float minChangeTime;
@@ -22,7 +18,6 @@ public class FloatingPlatformMovement : MonoBehaviour
 
     private void Start()
     {
-
         changeTime = Random.Range(minChangeTime, maxChangeTime);
         timer = changeTime;
     }
@@ -41,8 +36,22 @@ public class FloatingPlatformMovement : MonoBehaviour
         {
             directionSide = -directionSide;
             timer = changeTime;
-
-
         }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<PlayerMovement>())
+        {
+            collision.gameObject.transform.SetParent(null);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    { 
+        if (collision.gameObject.GetComponent<PlayerMovement>())
+        {
+            collision.gameObject.transform.SetParent(transform);
+        }
+    } 
 }

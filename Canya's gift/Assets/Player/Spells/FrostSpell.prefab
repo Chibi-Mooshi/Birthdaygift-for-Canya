@@ -135,11 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54efaa0c030ca7048a9657ff188b2125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellCoolDown: 5
+  spellCoolDown: 2
   manaCost: 5
   spellType: 0
   speed: 20
-  damage: 20
+  damage: 15
+  timeBeforeDestruction: 1
   healAmount: 0
   endEffect: {fileID: 7027080328654196048, guid: ef796b9f436370b4aa293bfa9decae05, type: 3}
   startEffect: {fileID: 8652695029656991446, guid: c767989693ee79d4992a92d09fedb17e, type: 3}
