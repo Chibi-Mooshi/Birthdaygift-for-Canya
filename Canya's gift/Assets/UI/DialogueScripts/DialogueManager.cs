@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
         DialogueBox = GameObject.Find("DialogueBox");
         DialogueName = GameObject.Find("CharacterName").GetComponent<Text>();
         DialogueText = GameObject.Find("DialogueText").GetComponent<Text>();
-        DialogueImage = GameObject.Find("DialogueImage").GetComponent<Image>();
+
 
         DialogueBox.SetActive(false);
 
@@ -34,7 +34,6 @@ public class DialogueManager : MonoBehaviour
 
     public Text DialogueName;
     public Text DialogueText;
-    public Image DialogueImage;
     //private Text DialogueName;
     //private Text DialogueText;
 
@@ -141,7 +140,6 @@ public class DialogueManager : MonoBehaviour
         completeText = info.myText;
 
         DialogueName.text = info.myName;
-        DialogueImage.sprite = info.myImage;
         DialogueText.text = info.myText;
 
         //for auto text

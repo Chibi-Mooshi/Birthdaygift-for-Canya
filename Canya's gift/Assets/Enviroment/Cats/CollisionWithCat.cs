@@ -8,8 +8,9 @@ public class CollisionWithCat : MonoBehaviour
 
     public GameObject triggerObject;
 
-    [Range(0,5)]
+    [Range(0, 5)]
     public float catRadius;
+
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class CollisionWithCat : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerMovement>())
         {
             onCollisionWithPlayer.Invoke();
-        } 
+        }
     }
 
     private void Update()
@@ -42,6 +43,7 @@ public class CollisionWithCat : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, catRadius);
     }
+
 
     public void DestroyObject()
     {

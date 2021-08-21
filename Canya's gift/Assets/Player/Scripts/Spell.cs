@@ -55,9 +55,17 @@ public class Spell : MonoBehaviour
        
     }
 
-    private void Update()
+    public void Update()
     {
-        Destroy(gameObject, timeBeforeDestruction);
+        //for destroying spells after a certain amount of time
+        timeBeforeDestruction -= Time.deltaTime;
+        if (timeBeforeDestruction <= 0 )
+        {
+            Instantiate(endEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject, timeBeforeDestruction);
+        }
+
+       
     }
 
 
