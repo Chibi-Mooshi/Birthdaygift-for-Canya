@@ -4308,6 +4308,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2946044675806681225, guid: 26b9160117aec784e99c9e3c9d951b37, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946044675806681225, guid: 26b9160117aec784e99c9e3c9d951b37, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -11358,7 +11362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7833966215065512352, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.043121
+      value: -12.84317
       objectReference: {fileID: 0}
     - target: {fileID: 7833966215065512352, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11696,18 +11700,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3914107480774134317, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: ad34353cbc2f6f44b9d7af6c0f8cb3bb, type: 2}
-    - target: {fileID: 7183373667115828613, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: delayAmount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7183373667115828613, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: addedManaAmount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7183373667115828613, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
       propertyPath: coolDownHolder1
       value: 
@@ -11724,10 +11716,6 @@ PrefabInstance:
       propertyPath: actionBarSpellHolder
       value: 
       objectReference: {fileID: 11400000, guid: 940e4b95fd8087a45a8fc3bc0da3e948, type: 2}
-    - target: {fileID: 7183373667115828614, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 267250200321626955, guid: 7dfd1b54a2e07fb409607eec9545fbd8, type: 3}
     - target: {fileID: 7183373667115828615, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -11799,22 +11787,6 @@ PrefabInstance:
     - target: {fileID: 7183373667115828666, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7183373667115828667, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: df9375fe8ef84034cbac5b4ac243ce87, type: 3}
-    - target: {fileID: 7183373667115828667, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: landSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 359c66b1142d6174eaa521dfedaa9fd0, type: 3}
-    - target: {fileID: 7183373667115828667, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: walkSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 640730bf311c0e646ab223788722fa46, type: 3}
-    - target: {fileID: 7183373667115828667, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
-      propertyPath: delayAmountForWalkdDustEffect
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}

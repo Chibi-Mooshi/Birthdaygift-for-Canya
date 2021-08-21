@@ -1,11 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
-
 
 public class SettingManager : MonoBehaviour
 {
-
     public static SettingManager instance = null;
 
     //Awake is always called before any Start functions
@@ -24,8 +21,6 @@ public class SettingManager : MonoBehaviour
         }
     }
 
-
-
     public Toggle fullScreenToggle;
     public Dropdown resolutionDropdown;
     public Dropdown texttureQualityDropdown;
@@ -39,16 +34,11 @@ public class SettingManager : MonoBehaviour
 
     public GameSettings gameSettings;
 
-
-
-    //
     private int resolutionValue;
 
     private void OnEnable()
     {
         audioSource = GameObject.Find("AudioManager").GetComponent<AudioSource>();
-
-
 
         //onvalueChanged.Addlistener --> whenever vlaue is changed, a listenr will react immediately
         fullScreenToggle.onValueChanged.AddListener(delegate { OnFullscreenToggle(); });
@@ -56,7 +46,7 @@ public class SettingManager : MonoBehaviour
         texttureQualityDropdown.onValueChanged.AddListener(delegate { onTextureQualityChange(); });
         musicVolumeSlider.onValueChanged.AddListener(delegate { OnAudioChange(); });
 
-        ApplyButton.onClick.AddListener(delegate { OnApplyButtonClick(); });
+        //ApplyButton.onClick.AddListener(delegate { OnApplyButtonClick(); });
 
         resolution = Screen.resolutions;
 
@@ -65,9 +55,7 @@ public class SettingManager : MonoBehaviour
             resolutionDropdown.options.Add(new Dropdown.OptionData(resolution.ToString()));
         }
 
-
         LoadSettings();
-
     }
 
     public void OnFullscreenToggle()
@@ -85,14 +73,12 @@ public class SettingManager : MonoBehaviour
 
     public void onTextureQualityChange()
     {
-        QualitySettings.masterTextureLimit =  texttureQualityDropdown.value;
-        
+        QualitySettings.masterTextureLimit =  texttureQualityDropdown.value; 
     }
 
     public void OnAudioChange()
     {
         audioSource.volume = musicVolumeSlider.value;
-
     }
 
     public void OnApplyButtonClick()
@@ -113,7 +99,6 @@ public class SettingManager : MonoBehaviour
 
     public void LoadSettings()
     {
-       
         musicVolumeSlider.value = gameSettings.musicVolume;
         texttureQualityDropdown.value = gameSettings.textureQuality;
         resolutionDropdown.value = gameSettings.resolutionsIndex;
@@ -121,8 +106,4 @@ public class SettingManager : MonoBehaviour
 
         resolutionDropdown.RefreshShownValue();
     }
-
-    
-
-
 }

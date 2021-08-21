@@ -62,8 +62,6 @@ public class DistanceToPlayer : MonoBehaviour
         {
             PlayRandomSound();
         }
-
-        Debug.Log(timer);
     }
 
     void PlayRandomSound()
