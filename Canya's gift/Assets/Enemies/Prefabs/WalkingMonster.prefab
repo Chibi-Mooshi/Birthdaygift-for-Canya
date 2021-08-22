@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.22}
-  m_SizeDelta: {x: 0, y: 4.44}
+  m_AnchoredPosition: {x: 0, y: 0.5834998}
+  m_SizeDelta: {x: 0, y: 1.167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7383680030702033860
 CanvasRenderer:
@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2187171408830914409}
   - component: {fileID: 2187171408830914407}
   - component: {fileID: 3515919112274698631}
+  - component: {fileID: 1113062658602308599}
   m_Layer: 0
   m_Name: WalkingMonster
   m_TagString: Untagged
@@ -187,7 +188,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.907521, y: -0.68670726}
@@ -274,6 +275,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &1113062658602308599
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2187171408830914413}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &4128056345775281964
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,8 +332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 9.83}
-  m_SizeDelta: {x: 21.65, y: 11.37}
+  m_AnchoredPosition: {x: -2.982, y: 6.22}
+  m_SizeDelta: {x: 10.096, y: 1.167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5530375408838982510
 Canvas:
@@ -409,8 +431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.2200012}
-  m_SizeDelta: {x: 0, y: 4.44}
+  m_AnchoredPosition: {x: 0, y: 0.5835006}
+  m_SizeDelta: {x: 0, y: 1.167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7354882524671454207
 CanvasRenderer:

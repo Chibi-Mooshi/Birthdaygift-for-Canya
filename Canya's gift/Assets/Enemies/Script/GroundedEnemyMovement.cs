@@ -68,7 +68,10 @@ public class GroundedEnemyMovement : MonoBehaviour
 
     public void Patrolling()
     {
-        transform.Translate(new Vector2(directionSide, 0) * speed * Time.deltaTime);
+        
+            transform.Translate(new Vector2(directionSide, 0) * speed * Time.deltaTime);
+       
+       
 
         timer -= Time.deltaTime;
         if (timer < 0)

@@ -65,6 +65,7 @@ public class Spell : MonoBehaviour
             Destroy(gameObject, timeBeforeDestruction);
         }
 
+
        
     }
 
@@ -110,13 +111,15 @@ public class Spell : MonoBehaviour
 
     public void Heal()
     {
+        rb.isKinematic = true;
+
         PlayerHealth playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
         if (playerHealth.currentHP < playerHealth.maxHP)
         {
             playerHealth.AddHealth(healAmount);
             Instantiate(endEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length + 0f);
         }
        /* if (player.gameObject.GetComponent<PlayerHealth>().currentHP < player.gameObject.GetComponent<PlayerHealth>().maxHP)
         {

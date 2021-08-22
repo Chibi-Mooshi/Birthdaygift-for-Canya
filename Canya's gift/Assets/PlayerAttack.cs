@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     [Tooltip("Insert spells here"),SerializeField]private GameObject[] spellPrefab;
 
     [Tooltip("Add firepoint object here")]public Transform firePoint;
+    [Tooltip("Add feetposition here")] public Transform feetPosition;
 
     [Tooltip("What should be the max amount of mana the player has?")]public int maxMana;
 
@@ -122,13 +123,16 @@ public class PlayerAttack : MonoBehaviour
 
             } else if (spell.spellType == Spell.SpellType.defensive && playerHealth.currentHP < playerHealth.maxHP)
             {
-                Debug.Log("Is casting spell");
+
 
                 //play audio
                 audioSource.PlayOneShot(spell.spellSound);
 
                 currentMana -= spell.manaCost;
-                Instantiate(spellPrefab[spellIndex], firePoint.position, firePoint.rotation);
+               GameObject healingSpell = Instantiate(spellPrefab[spellIndex], feetPosition.position, feetPosition.rotation);
+              
+                healingSpell.transform.parent = feetPosition.transform;
+             
 
                 //for cooldown
                 coolDownHolder[spellIndex].spellCoolDown = spell.spellCoolDown;

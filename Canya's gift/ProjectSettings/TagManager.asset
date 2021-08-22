@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Feet
   - Enemy
+  - Cat
   layers:
   - Default
   - TransparentFX

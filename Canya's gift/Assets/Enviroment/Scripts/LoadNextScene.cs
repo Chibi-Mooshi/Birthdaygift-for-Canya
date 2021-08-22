@@ -4,13 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextScene : MonoBehaviour
 {
-
-  
-
     [SerializeField] private UnityEvent onCollisionWithSceneManager;
-
-    
-   
 
   /*  private void OnTriggerEnter2D(Collider2D collision)
     {

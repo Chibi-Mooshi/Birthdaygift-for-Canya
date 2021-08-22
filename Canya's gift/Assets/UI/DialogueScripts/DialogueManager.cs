@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-
 public class DialogueManager : MonoBehaviour
 {
 
@@ -48,7 +47,6 @@ public class DialogueManager : MonoBehaviour
     public UnityEvent onDialogueEnd;
     public UnityEvent onDialogueOpen;
 
-
     //for event
     public delegate void OnDialogueLineCallBack(int dialogueLine);
     public OnDialogueLineCallBack onDialogueLineCallBack;
@@ -58,35 +56,30 @@ public class DialogueManager : MonoBehaviour
     //for buffing text
     private bool Buffer;
 
+    private GameManager gameManager;
 
     public Queue<Dialogue.Info> dialogueInfo = new Queue<Dialogue.Info>(); //First in first out
 
     private void Start()
     {
-       
-
-   
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     public void EnqueueDialogue(Dialogue db) //makes it take the dialogue information and place it in a qeueu
     {
-
         if (inDialogue) { return; }
         inDialogue = true;
-
 
         //for buffing
         Buffer = true;
         StartCoroutine(BufferTime());
 
-
-
-
         DialogueBox.SetActive(true);
 
         dialogueInfo.Clear();
 
-        
+        //stop player from moving
+        gameManager.player.GetComponent<PlayerMovement>().enabled = false;
 
         foreach (Dialogue.Info info in db.dialogueInfo)
         {
@@ -96,14 +89,11 @@ public class DialogueManager : MonoBehaviour
         //for events
         TotalLineCount = dialogueInfo.Count;
 
-
         DequeueDialogue();
     }
 
     public void DequeueDialogue() // this is for displaying the dialogue
     {
-
-
 
         //if currently typing,
 
@@ -111,8 +101,6 @@ public class DialogueManager : MonoBehaviour
         {
             //for buffing 
             if (Buffer == true) return;
-
-
 
             CompleteText();
             StopAllCoroutines();
@@ -135,6 +123,10 @@ public class DialogueManager : MonoBehaviour
         {
             onDialogueLineCallBack.Invoke(TotalLineCount - dialogueInfo.Count);
         }
+
+        //FOR PLAYING EVENTS
+       var dialogueEvent = info.dialogueEvent;
+        dialogueEvent.Invoke();
 
         //for auto type
         completeText = info.myText;
@@ -188,12 +180,15 @@ public class DialogueManager : MonoBehaviour
         inDialogue = false;
 
         onDialogueOpen.Invoke();
-    }
 
+        //start player movement again
+        gameManager.player.GetComponent<PlayerMovement>().enabled = true;
+
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (inDialogue)
             {
@@ -201,6 +196,4 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
-
-    
 }
