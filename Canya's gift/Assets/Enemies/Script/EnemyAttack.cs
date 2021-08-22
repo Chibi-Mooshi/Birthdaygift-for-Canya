@@ -50,7 +50,22 @@ public class EnemyAttack : MonoBehaviour
 
         }
 
-      
-       
     }
+
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+
+        if (isReadyToAttack)
+        {
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+                isReadyToAttack = false;
+            }
+
+        }
+    }
+
 }

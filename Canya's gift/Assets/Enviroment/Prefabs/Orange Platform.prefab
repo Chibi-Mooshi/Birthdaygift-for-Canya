@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6336424767808329253}
   - component: {fileID: 6336424767808329259}
   - component: {fileID: 6066773389063308824}
+  - component: {fileID: 6213639043436948614}
   m_Layer: 0
   m_Name: Orange Platform
   m_TagString: Ground
@@ -147,3 +148,15 @@ MonoBehaviour:
   maxChangeTime: 1
   minChangeTime: 2
   directionSide: 1
+--- !u!114 &6213639043436948614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6336424767808329255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d697623142189294da8771c12f345b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

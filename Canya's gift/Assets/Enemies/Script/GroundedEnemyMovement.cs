@@ -19,21 +19,10 @@ public class GroundedEnemyMovement : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
+
         timer = changeTime;
     }
-/*
-    private void Update()
-    {
-        transform.Translate(new Vector2(directionSide, 0) * speed * Time.deltaTime);
 
-        timer -= Time.deltaTime;
-        if (timer < 0)
-        {
-            directionSide = -directionSide;
-            timer = changeTime;
-        }
-    }
-*/
     public void FixedUpdate()
     {
             //Length of the ray

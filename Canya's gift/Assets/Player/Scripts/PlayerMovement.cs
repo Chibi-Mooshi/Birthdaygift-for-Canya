@@ -14,12 +14,14 @@ public class PlayerMovement : MonoBehaviour
    [Tooltip("How fast should the player fall after their jump?")]public float drag = -0.1f;
 
    [Tooltip("What particles should spawn when the player hits the ground after jump")]public GameObject dustJumpEffect;
+    [Tooltip("What particles should spawn when the player hits the ground after jump")] public GameObject purpleDustJumpEffect;
 
-   [Tooltip("Add feetobject here")]public Transform feetPosition;
+    [Tooltip("Add feetobject here")]public Transform feetPosition;
 
    [Tooltip("What particles should spawn when the player walks on ground")] public GameObject walkParticleEffect;
-    
-   [Tooltip("How much time should spawn between walk dust spawning and walk sound playing?")] public float delayAmountForWalkdDustEffect;
+    [Tooltip("What particles should spawn when the player walks on ground")] public GameObject purpleWalkParticleEffect;
+
+    [Tooltip("How much time should spawn between walk dust spawning and walk sound playing?")] public float delayAmountForWalkdDustEffect;
 
     [Space(10)]
     [Header("Audio")]
@@ -72,8 +74,15 @@ public class PlayerMovement : MonoBehaviour
         {
             if (spawnDust == true)
             {
-                Instantiate(dustJumpEffect, feetPosition.position, Quaternion.identity);
+                if (groundCollision.orangeGround)
+                {
+                    Instantiate(dustJumpEffect, feetPosition.position, Quaternion.identity);
+                } else
+                {
+                    Instantiate(purpleDustJumpEffect, feetPosition.position, Quaternion.identity);
+                }
 
+                
 
                 spawnDust = false;
 
@@ -112,7 +121,15 @@ public class PlayerMovement : MonoBehaviour
             if (timer <= 0)
             {
                 if (groundCollision.isGrounded) { 
-                Instantiate(walkParticleEffect, feetPosition.position, Quaternion.identity);
+
+                    if (groundCollision.orangeGround)
+                    {
+                        Instantiate(walkParticleEffect, feetPosition.position, Quaternion.identity);
+                    } else
+                    {
+                        Instantiate(purpleWalkParticleEffect, feetPosition.position, Quaternion.identity);
+                    }
+               
                 timer = delayAmountForWalkdDustEffect;
 
                 var randomVolume = Random.Range(0.1f, 0.9f);

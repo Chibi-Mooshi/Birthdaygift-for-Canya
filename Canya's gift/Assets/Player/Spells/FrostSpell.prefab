@@ -139,7 +139,7 @@ MonoBehaviour:
   spellCoolDown: 2
   manaCost: 5
   spellType: 0
-  speed: 20
+  speed: 10
   damage: 15
   timeBeforeDestruction: 1
   healAmount: 0
