@@ -124,6 +124,10 @@ public class DialogueManager : MonoBehaviour
             onDialogueLineCallBack.Invoke(TotalLineCount - dialogueInfo.Count);
         }
 
+        //FOR PLAYING EVENTS
+       var dialogueEvent = info.dialogueEvent;
+        dialogueEvent.Invoke();
+
         //for auto type
         completeText = info.myText;
 

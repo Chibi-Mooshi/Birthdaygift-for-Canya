@@ -1,34 +1,10 @@
 using UnityEngine;
 
-
-[RequireComponent(typeof(DialogueTrigger))]
 public class DialogueEventTrigger : MonoBehaviour
 {
-    private DialogueTrigger dialogueTrigger;
-
-    private int dialogueTriggerIndex;
-
-    // private bool hasAddedEvent;
-
-    private void Start()
+   public void DebugTest()
     {
-        dialogueTrigger = GetComponent<DialogueTrigger>();
-
+        Debug.Log("This script is working");
     }
-
-    private void Update()
-    {
-        
-    }
-
-
-    public void PlayEvent()
-    {
-      var dialogueLength =  dialogueTrigger.dialogue;
-
-       
-       
-    }
-
 
 }

@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     [Tooltip("Insert spells here"),SerializeField]private GameObject[] spellPrefab;
 
     [Tooltip("Add firepoint object here")]public Transform firePoint;
+    [Tooltip("Add feetposition here")] public Transform feetPosition;
 
     [Tooltip("What should be the max amount of mana the player has?")]public int maxMana;
 
@@ -128,7 +129,8 @@ public class PlayerAttack : MonoBehaviour
                 audioSource.PlayOneShot(spell.spellSound);
 
                 currentMana -= spell.manaCost;
-                Instantiate(spellPrefab[spellIndex], firePoint.position, firePoint.rotation);
+                Instantiate(spellPrefab[spellIndex], feetPosition.position, feetPosition.rotation);
+                spellPrefab[spellIndex].transform.SetParent(gameObject.transform);
 
                 //for cooldown
                 coolDownHolder[spellIndex].spellCoolDown = spell.spellCoolDown;

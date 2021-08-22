@@ -116,7 +116,7 @@ public class Spell : MonoBehaviour
         {
             playerHealth.AddHealth(healAmount);
             Instantiate(endEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorClipInfo(0).Length + 0f);
         }
        /* if (player.gameObject.GetComponent<PlayerHealth>().currentHP < player.gameObject.GetComponent<PlayerHealth>().maxHP)
         {
