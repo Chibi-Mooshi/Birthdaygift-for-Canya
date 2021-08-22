@@ -129,8 +129,10 @@ public class PlayerAttack : MonoBehaviour
                 audioSource.PlayOneShot(spell.spellSound);
 
                 currentMana -= spell.manaCost;
-                Instantiate(spellPrefab[spellIndex], feetPosition.position, feetPosition.rotation);
-                spellPrefab[spellIndex].transform.SetParent(gameObject.transform);
+               GameObject healingSpell = Instantiate(spellPrefab[spellIndex], feetPosition.position, feetPosition.rotation);
+              
+                healingSpell.transform.parent = feetPosition.transform;
+             
 
                 //for cooldown
                 coolDownHolder[spellIndex].spellCoolDown = spell.spellCoolDown;

@@ -65,6 +65,7 @@ public class Spell : MonoBehaviour
             Destroy(gameObject, timeBeforeDestruction);
         }
 
+
        
     }
 
@@ -110,6 +111,8 @@ public class Spell : MonoBehaviour
 
     public void Heal()
     {
+        rb.isKinematic = true;
+
         PlayerHealth playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
 
         if (playerHealth.currentHP < playerHealth.maxHP)
