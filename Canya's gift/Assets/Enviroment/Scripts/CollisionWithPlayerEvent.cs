@@ -13,12 +13,14 @@ public class CollisionWithPlayerEvent : MonoBehaviour
 
     private int scoreForLevel;
 
+    public int currentLevelCatScore;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.GetComponent<PlayerMovement>())
         {
-            if (score.scoreAmount >= scoreForLevel)
+            if (currentLevelCatScore >= scoreForLevel)
             {
                 ifAllCatsAreCollected.Invoke();
             } else
@@ -30,11 +32,18 @@ public class CollisionWithPlayerEvent : MonoBehaviour
     }
 
 
-    public void Update()
+    public void Start()
     {
-        GameObject[] cats = GameObject.FindGameObjectsWithTag("Cat");
+     currentLevelCatScore = 0;
+
+         GameObject[] cats = GameObject.FindGameObjectsWithTag("Cat");
         scoreForLevel = cats.Length;
+
     }
 
+    public void RaiseAmount()
+    {
+        currentLevelCatScore++;
+    }
 
 }

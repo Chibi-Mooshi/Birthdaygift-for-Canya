@@ -123,7 +123,7 @@ public class PlayerAttack : MonoBehaviour
 
             } else if (spell.spellType == Spell.SpellType.defensive && playerHealth.currentHP < playerHealth.maxHP)
             {
-                Debug.Log("Is casting spell");
+
 
                 //play audio
                 audioSource.PlayOneShot(spell.spellSound);
