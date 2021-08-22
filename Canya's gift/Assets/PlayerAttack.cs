@@ -91,7 +91,9 @@ public class PlayerAttack : MonoBehaviour
         
     }
 
-   public void CastSpell()
+   
+
+    public void CastSpell()
     {
        
 
@@ -123,7 +125,7 @@ public class PlayerAttack : MonoBehaviour
 
             } else if (spell.spellType == Spell.SpellType.defensive && playerHealth.currentHP < playerHealth.maxHP)
             {
-
+                animator.SetTrigger("Heal");
 
                 //play audio
                 audioSource.PlayOneShot(spell.spellSound);
