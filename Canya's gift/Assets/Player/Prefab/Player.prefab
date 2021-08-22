@@ -187,8 +187,10 @@ MonoBehaviour:
   jumpHeight: 20
   drag: -0.1
   dustJumpEffect: {fileID: 2770796333904165846, guid: 81b131cc980f3014ea33579c2157baf3, type: 3}
+  purpleDustJumpEffect: {fileID: 2770796333904165846, guid: f5e6ffc627b1d7f4faea0a22c23b93d1, type: 3}
   feetPosition: {fileID: 7183373667604574000}
   walkParticleEffect: {fileID: 2524679135266687949, guid: 71ebc34af04b4be42bff86fe7788eb00, type: 3}
+  purpleWalkParticleEffect: {fileID: 2524679135266687949, guid: 02244e0ce8e053443ae8508dd6a533d1, type: 3}
   delayAmountForWalkdDustEffect: 2
   walkSound: {fileID: 8300000, guid: 640730bf311c0e646ab223788722fa46, type: 3}
   jumpSound: {fileID: 8300000, guid: df9375fe8ef84034cbac5b4ac243ce87, type: 3}
@@ -206,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
+  orangeGround: 0
 --- !u!114 &7183373667115828613
 MonoBehaviour:
   m_ObjectHideFlags: 0

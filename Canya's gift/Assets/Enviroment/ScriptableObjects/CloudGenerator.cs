@@ -62,7 +62,7 @@ public class CloudGenerator : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            Vector3 spawnPos = startPos + Vector3.right * (i * 2);
+            Vector3 spawnPos = startPos + Vector3.right * (i * 10);
             SpawnCloud(spawnPos);
         }
     }

@@ -4,7 +4,6 @@ public class GroundCollision : MonoBehaviour
 {
 
     [HideInInspector] public bool isGrounded;
-    [HideInInspector] public bool orangeGround;
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -13,10 +12,6 @@ public class GroundCollision : MonoBehaviour
             isGrounded = true;
         }
 
-        if (collision.gameObject.GetComponent<CheckTerrainHandler>())
-        {
-            orangeGround = true;
-        }
     }
 
     public void OnCollisionStay2D(Collision2D collision)
@@ -26,11 +21,6 @@ public class GroundCollision : MonoBehaviour
             isGrounded = true;
         }
 
-
-        if (collision.gameObject.GetComponent<CheckTerrainHandler>())
-        {
-            orangeGround = true;
-        }
     }
 
     public void OnCollisionExit2D(Collision2D collision)
@@ -40,10 +30,5 @@ public class GroundCollision : MonoBehaviour
             isGrounded = false;
         }
 
-
-        if (collision.gameObject.GetComponent<CheckTerrainHandler>())
-        {
-            orangeGround = false;
-        }
     }
 }

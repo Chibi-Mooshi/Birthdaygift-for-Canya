@@ -62,7 +62,6 @@ public class FlexibleEnemyMovement : MonoBehaviour
     {
            transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
 
-        animator.SetBool("isAttacking", false);
 
         if (transform.position == positions[index])
            {

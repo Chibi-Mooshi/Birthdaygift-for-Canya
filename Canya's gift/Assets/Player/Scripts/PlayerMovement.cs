@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -74,16 +75,17 @@ public class PlayerMovement : MonoBehaviour
         {
             if (spawnDust == true)
             {
-                if (groundCollision.orangeGround)
-                {
-                    Instantiate(dustJumpEffect, feetPosition.position, Quaternion.identity);
-                } else
+                Scene currentScene = SceneManager.GetActiveScene();
+                string sceneName = currentScene.name;
+
+               if (sceneName == "Scene 4" || sceneName == "Scene 5")
                 {
                     Instantiate(purpleDustJumpEffect, feetPosition.position, Quaternion.identity);
+                } else
+                {
+                    Instantiate(dustJumpEffect, feetPosition.position, Quaternion.identity);
                 }
-
                 
-
                 spawnDust = false;
 
                 feetAudioSource.PlayOneShot(landSound);
@@ -95,16 +97,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     // Update is called once per frame
     void FixedUpdate()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
-
-
-       
 
         //animator
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
@@ -114,23 +111,26 @@ public class PlayerMovement : MonoBehaviour
         else if (moveInput < 0 && facingLeft)
             reverseImage();
 
-
         //for spawning
         if (moveInput != 0)
         {
             if (timer <= 0)
             {
-                if (groundCollision.isGrounded) { 
+                if (groundCollision.isGrounded) {
 
-                    if (groundCollision.orangeGround)
+                    Scene currentScene = SceneManager.GetActiveScene();
+                    string sceneName = currentScene.name;
+
+                    if (sceneName == "Scene 4" || sceneName == "Scene 5")
                     {
-                        Instantiate(walkParticleEffect, feetPosition.position, Quaternion.identity);
-                    } else
-                    {
-                        Instantiate(purpleWalkParticleEffect, feetPosition.position, Quaternion.identity);
+                        Instantiate(purpleDustJumpEffect, feetPosition.position, Quaternion.identity);
                     }
-               
-                timer = delayAmountForWalkdDustEffect;
+                    else
+                    {
+                        Instantiate(dustJumpEffect, feetPosition.position, Quaternion.identity);
+                    }
+
+                    timer = delayAmountForWalkdDustEffect;
 
                 var randomVolume = Random.Range(0.1f, 0.9f);
                 feetAudioSource.volume = randomVolume;
@@ -152,10 +152,5 @@ public class PlayerMovement : MonoBehaviour
         facingLeft = !facingLeft;
 
         transform.Rotate(0f, 180f, 0f);
-        /*
-        Vector2 theScale = rb.transform.localScale;
-        theScale.x *= -1;
-        rb.transform.localScale = theScale;
-        */
     }
 }
