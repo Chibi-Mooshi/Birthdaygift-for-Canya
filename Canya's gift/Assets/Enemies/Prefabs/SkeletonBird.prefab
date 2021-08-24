@@ -157,6 +157,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 818824f0b07f4a6469443d9b01794bb4, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnemyDiesSound: {fileID: 0}
   deathEffect: {fileID: 4347495670719806274, guid: 5f125f27fa46709409f2a6f3f2f7e965, type: 3}
   healthBar: {fileID: 6191124495166525799}

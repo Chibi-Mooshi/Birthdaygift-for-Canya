@@ -660,11 +660,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4444951090375177504, guid: cfd064b04cc94a84da00659b58fbd90c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.869415
+      value: -16.540466
       objectReference: {fileID: 0}
     - target: {fileID: 4444951090375177504, guid: cfd064b04cc94a84da00659b58fbd90c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5539627
+      value: -0.18147278
       objectReference: {fileID: 0}
     - target: {fileID: 7365079315886211864, guid: cfd064b04cc94a84da00659b58fbd90c, type: 3}
       propertyPath: orthographic size
