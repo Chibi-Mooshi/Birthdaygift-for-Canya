@@ -10,8 +10,13 @@ public class CompanionCutSceneHandler : MonoBehaviour
     [Tooltip("Add raise event here to spawn druid")]
     public UnityEvent onSpawnDruid;
 
+  
 
-   public void CheckEnemyScore()
+    private void Start()
+    {
+       
+    }
+    public void CheckEnemyScore()
     {
         if (enemyScore.scoreAmount > 0)
         {
@@ -21,6 +26,4 @@ public class CompanionCutSceneHandler : MonoBehaviour
             onSpawnDruid.Invoke();
         }
     }
-
-
 }

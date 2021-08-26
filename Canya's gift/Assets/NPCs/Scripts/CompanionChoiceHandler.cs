@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CompanionChoiceHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   public ChoiceHolderScriptableObject choice;
+
+    public void onChoosingWarrior()
     {
-        
+        choice.hasWarrior = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void onChoosingDruid()
     {
-        
+        choice.hasDruid = true;
     }
+
+
+    public void isAlone()
+    {
+        choice.isAlone = true;
+    }
+
+
+
+
+
 }
