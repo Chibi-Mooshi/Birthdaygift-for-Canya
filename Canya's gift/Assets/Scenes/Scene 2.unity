@@ -5644,10 +5644,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadNextSceneObject
       objectReference: {fileID: 0}
+    - target: {fileID: 3457483904454859293, guid: f68585f8473c48a44975604f027337a6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5910455146898563262, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8c8be577c54bb6649beaed0bd40bb1d3, type: 3}
+      objectReference: {fileID: 21300000, guid: 92d6d08c2a6927e469ed486ca4e240ed, type: 3}
+    - target: {fileID: 8051110148720609245, guid: f68585f8473c48a44975604f027337a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051110148720609245, guid: f68585f8473c48a44975604f027337a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8572933881042424759, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: sceneToLoad
       value: 2
@@ -5662,7 +5674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672930656805191697, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 8672930656805191697, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9741,6 +9753,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 483104676974638269, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1eed807ec2139364fa38069b84459b8b, type: 3}
+    - target: {fileID: 2575867292471908338, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 2575867292863519394, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9788,6 +9808,26 @@ PrefabInstance:
     - target: {fileID: 2575867293553553604, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599562622924435604, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 975.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599562622924435604, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550241973086676388, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 706.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8719514790066567584, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 705.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987312850208166196, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133929845427932627, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -11741,11 +11781,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4251608732192515504, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.0206
+      value: -18.430603
       objectReference: {fileID: 0}
     - target: {fileID: 4251608732192515504, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3839645
+      value: -3.1839638
       objectReference: {fileID: 0}
     - target: {fileID: 4251608732192515506, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_Follow
@@ -11913,7 +11953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7833966215065512352, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.21698
+      value: -6.289673
       objectReference: {fileID: 0}
     - target: {fileID: 7833966215065512352, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12031,11 +12071,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7183373667115828615, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.29
+      value: -40.7
       objectReference: {fileID: 0}
     - target: {fileID: 7183373667115828615, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7183373667115828615, guid: a1c48eea9d41d3d4bad5a964757d7599, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12138,6 +12178,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8119279933503293740, guid: 628effe85d26e3944b529011f2f07fc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -94.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119279933503293740, guid: 628effe85d26e3944b529011f2f07fc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 24.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119279933503293746, guid: 628effe85d26e3944b529011f2f07fc2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 34d4caf4292f4b14b9c5c3f47c9e2a5c, type: 2}
     - target: {fileID: 8692512080387586153, guid: 628effe85d26e3944b529011f2f07fc2, type: 3}
       propertyPath: m_RootOrder
       value: 15
