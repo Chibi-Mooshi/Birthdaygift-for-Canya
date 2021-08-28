@@ -14,11 +14,13 @@ public class BossHealth : MonoBehaviour
     private void Start()
     {
         currentHP = maxHP;
+        bossHealthBar.maxValue = maxHP;
     }
 
     private void Update()
     {
         bossHealthBar.value = currentHP;
+
     }
 
 
@@ -29,13 +31,16 @@ public class BossHealth : MonoBehaviour
             onDeath.Invoke();
         }
         currentHP -= damage;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Spell spell = collision.GetComponent<Spell>();
-        if (collision != spell)
+        if (spell != null)
         {
+            Debug.Log("Boss take damage");
+
             TakeDamage(spell.damage);
         }
     }
