@@ -1,25 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
-public class BossHealth : EnemyHealth
+public class BossHealth : MonoBehaviour
 {
+    public Slider bossHealthBar;
 
-    public ValueBarData healthData;
+    [Tooltip("How much health should the enemy have?")] public float maxHP;
+    [HideInInspector] public float currentHP;
 
-    // Start is called before the first frame update
-    void Start()
+    [Tooltip("What should happen when the enemy dies?")] public UnityEvent onDeath;
+
+    private void Start()
     {
         currentHP = maxHP;
-        healthData.maxValue = maxHP;
-
     }
 
-    
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        healthData.currentValue = currentHP;
+        bossHealthBar.value = currentHP;
+    }
+
+
+    public void TakeDamage(float damage)
+    {
+        if (currentHP <= 0)
+        {
+            onDeath.Invoke();
+        }
+        currentHP -= damage;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Spell spell = collision.GetComponent<Spell>();
+        if (collision != spell)
+        {
+            TakeDamage(spell.damage);
+        }
     }
 }
