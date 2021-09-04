@@ -12,12 +12,17 @@ public class CompanionHandler : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject shieldSpellFromWarrior;
+    public GameObject shieldSpellFromDruid;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        spriteRender = GetComponent<SpriteRenderer>();
     }
 
-    // Start is called before the first frame update
+
     void Start()
     {
        if (choice.hasDruid)
@@ -46,14 +51,17 @@ public class CompanionHandler : MonoBehaviour
     }
 
 
-    public void DruidHandler()
+    private void DruidHandler()
     {
+       GameObject protectionSpell = Instantiate(shieldSpellFromDruid, player.transform.position, Quaternion.identity);
 
+        protectionSpell.transform.parent = player.transform;
     }
 
-    public void WarriorHandler()
+    private void WarriorHandler()
     {
-
+       GameObject protectionSpell = Instantiate(shieldSpellFromWarrior, player.transform.position, Quaternion.identity);
+        protectionSpell.transform.parent = player.transform;
     }
 
    

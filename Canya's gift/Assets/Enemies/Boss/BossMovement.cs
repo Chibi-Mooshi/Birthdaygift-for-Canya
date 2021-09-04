@@ -8,32 +8,54 @@ public class BossMovement : MonoBehaviour
 
     public GameObject spellPrefabFollow;
 
+    public GameObject playerTooCloseToWitchParticleSpawn;
+
     public int spellAmount = 5;
 
-    public UnityEvent onCastSpellShower;
+    public int damage = 5;
 
+    public UnityEvent onCastSpellShower;
+    public UnityEvent onCastSpellFollow;
 
     private int currentSpellSummoned;
+
+    private BossHealth bossHealth;
 
     //for timer
     [SerializeField]
     private float timerToCastSpells;
+    [SerializeField] private float timerToCastSpellsAtHalfHealth;
     private float elapsed;
 
     private void Start()
     {
         currentSpellSummoned = 0;
         castSpellShower();
+
+        bossHealth = GetComponent<BossHealth>();
     }
 
     public void Update()
     {
 
         elapsed += Time.deltaTime;
-        if (elapsed >= timerToCastSpells)
+
+        if (bossHealth.currentHP < bossHealth.maxHP / 2)
         {
-            elapsed = 0f;
-            castSpellShower();
+            if (elapsed >= timerToCastSpellsAtHalfHealth)
+            {
+                elapsed = 0f;
+                castSpellShower();
+            }
+        }
+        else
+        {
+
+            if (elapsed >= timerToCastSpells)
+            {
+                elapsed = 0f;
+                castSpellShower();
+            }
         }
        
     }
@@ -42,8 +64,6 @@ public class BossMovement : MonoBehaviour
     {
 
       
-
-        Debug.Log(currentSpellSummoned);
         if (currentSpellSummoned < spellAmount)
         {
             for (int i = 0; i < 1; ++i)
@@ -61,6 +81,7 @@ public class BossMovement : MonoBehaviour
         {
             currentSpellSummoned = 0;
             followSpell();
+            onCastSpellFollow.Invoke();
         }
     }
 
@@ -69,5 +90,19 @@ public class BossMovement : MonoBehaviour
         Instantiate(spellPrefabFollow, transform.position, Quaternion.identity);
     }
 
- 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.TakeDamage(damage);
+            Instantiate(playerTooCloseToWitchParticleSpawn, transform.position, Quaternion.identity);
+
+        }
+
+
+    }
+
+
 }
