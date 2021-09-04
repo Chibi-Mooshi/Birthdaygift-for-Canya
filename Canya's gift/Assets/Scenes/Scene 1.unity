@@ -4484,7 +4484,7 @@ PrefabInstance:
     - target: {fileID: 5910455146898563262, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8c8be577c54bb6649beaed0bd40bb1d3, type: 3}
+      objectReference: {fileID: 21300000, guid: 92d6d08c2a6927e469ed486ca4e240ed, type: 3}
     - target: {fileID: 8572933881042424759, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: sceneToLoad
       value: 2
@@ -4499,7 +4499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672930656805191697, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 8672930656805191697, guid: f68585f8473c48a44975604f027337a6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7101,6 +7101,10 @@ PrefabInstance:
     - target: {fileID: 2575867293553553604, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987312850208166196, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9133929845427932627, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchorMax.y
