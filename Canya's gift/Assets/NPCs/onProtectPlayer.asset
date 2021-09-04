@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5e81c50048ecb469b9a3396ff025b0, type: 3}
-  m_Name: Companion
+  m_Script: {fileID: 11500000, guid: 2f3b3393614101542a0f89a4b7734e1e, type: 3}
+  m_Name: onProtectPlayer
   m_EditorClassIdentifier: 
-  hasWarrior: 1
-  hasDruid: 0
-  isAlone: 0
+  description: 

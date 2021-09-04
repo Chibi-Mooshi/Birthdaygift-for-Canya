@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class BossSpellFollow : MonoBehaviour
 {
-
     public float timeBeforeDestruction = 10f;
 
     [Header("Effects for spells")]
@@ -32,7 +31,6 @@ public class BossSpellFollow : MonoBehaviour
         
     }
 
-    // Start is called before the first frame update
     public void Update()
     {
         rb.AddForce(aim * speed);
@@ -48,14 +46,10 @@ public class BossSpellFollow : MonoBehaviour
             Instantiate(endEffect, transform.position, Quaternion.identity);
             Destroy(gameObject, timeBeforeDestruction);
         }
-
-
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
@@ -64,7 +58,10 @@ public class BossSpellFollow : MonoBehaviour
             Destroy(gameObject);
         }
 
-
+        ProtectionSpell protectionSpell = collision.GetComponent<ProtectionSpell>();
+        if (protectionSpell != null)
+        {
+            Destroy(gameObject);
+        }
     }
-
 }
