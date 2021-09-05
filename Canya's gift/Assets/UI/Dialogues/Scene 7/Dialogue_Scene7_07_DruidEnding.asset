@@ -10,40 +10,53 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5f26cbca438af54b81f06257d4d9391, type: 3}
-  m_Name: Dialogue_Scene7_02
+  m_Name: Dialogue_Scene7_07_DruidEnding
   m_EditorClassIdentifier: 
   dialogueInfo:
-  - myName: Witch
-    myText: Agh! you defeated me
+  - myName: Druid
+    myText: Are you alright? Are you hurt?
     myVoice: {fileID: 0}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - myName: canya
-    myText: Now, hand me back my cat!
+  - myName: Canya
+    myText: I am fine, do not worry. Thank you for helping me out.
     myVoice: {fileID: 0}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - myName: 
-    myText: 
+  - myName: Druid
+    myText: 'I am only happy to be of service. '
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: If you have the time, perhaps you would like to accompany back to my
+      cottage?
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: For a cup of tea, that is.
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: A cup of tea would certainly be lovely about now.
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: A cup of tea would certainly be lovely about now.
     myVoice: {fileID: 0}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11400000, guid: 684911c38e1ef8646a34d8d40414fb08, type: 2}
-          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-          m_MethodName: Raise
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 11400000, guid: 9a729f1176ce08440a9a5ea96647a4eb, type: 2}
+        - m_Target: {fileID: 11400000, guid: ae27dda33122405438a3ac2802a75240, type: 2}
           m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
           m_MethodName: Raise
           m_Mode: 1

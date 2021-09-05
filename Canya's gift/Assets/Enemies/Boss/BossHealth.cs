@@ -39,7 +39,6 @@ public class BossHealth : MonoBehaviour
         Spell spell = collision.GetComponent<Spell>();
         if (spell != null)
         {
-            Debug.Log("Boss take damage");
 
             TakeDamage(spell.damage);
         }

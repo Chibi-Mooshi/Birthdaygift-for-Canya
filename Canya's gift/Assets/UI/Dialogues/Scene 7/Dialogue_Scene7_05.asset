@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f26cbca438af54b81f06257d4d9391, type: 3}
+  m_Name: Dialogue_Scene7_05
+  m_EditorClassIdentifier: 
+  dialogueInfo:
+  - myName: Canya
+    myText: I do not wish to hurt you. I just want my cat back.
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 98e375f7e054ff34c9da6b163a490439, type: 2}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Witch
+    myText: Your... your cat? This cat is yours?
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: Yes, it is! I have been spending several hours collecting all my cats.
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: The monsters in the forest scared them away from my cottage and into
+      the woods.
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Witch
+    myText: 'Oh no, I apologize. That is all my fault. I only meant to scare the
+      villagers, not your kittens. '
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Witch
+    myText: Ah, I see. I am glad to hear that.
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Witch
+    myText: ......
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Witch
+    myText: Do you have many cats?
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: Would you like to come over for a cup of tea and meet them all?
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Witch
+    myText: Ah, that...
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Witch
+    myText: 'I would love that. '
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Witch
+    myText: 'I would love that. '
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: ae27dda33122405438a3ac2802a75240, type: 2}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

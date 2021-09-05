@@ -16,7 +16,7 @@ public class Dialogue : ScriptableObject
         public UnityEvent dialogueEvent;
 
     }
-    [Header("inster dialogue info below")]
+    [Header("Insert text below")]
     public Info[] dialogueInfo;
 
 }

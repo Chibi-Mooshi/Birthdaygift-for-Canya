@@ -53,7 +53,7 @@ public class CompanionHandler : MonoBehaviour
 
     private void DruidHandler()
     {
-       GameObject protectionSpell = Instantiate(shieldSpellFromDruid, player.transform.position, Quaternion.identity);
+       GameObject protectionSpell = Instantiate(shieldSpellFromDruid, new Vector2(player.transform.position.x, player.transform.position.y + 5), Quaternion.identity);
 
         protectionSpell.transform.parent = player.transform;
     }
