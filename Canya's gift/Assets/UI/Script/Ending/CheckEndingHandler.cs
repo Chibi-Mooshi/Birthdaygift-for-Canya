@@ -4,6 +4,8 @@ using UnityEngine.Events;
 public class CheckEndingHandler : MonoBehaviour
 {
     public CheckEndingScriptableObject ending;
+    public CheckEndingScriptableObject endingHolder;
+
     public ChoiceHolderScriptableObject choice;
 
     public Dialogue[] dialogueWithWarrior;
@@ -27,16 +29,19 @@ public class CheckEndingHandler : MonoBehaviour
         {
             ending.withDruid = true;
             dialogueTrigger.dialogue = dialogueWithDruid;
+            endingHolder.withDruid = true;
             withDruidEnding.Invoke();
         } else if (choice.hasWarrior)
         {
             ending.withWarrior = true;
             dialogueTrigger.dialogue = dialogueWithWarrior;
+            endingHolder.withWarrior = true;
             withWarriorEnding.Invoke();
         } else if (choice.isAlone)
         {
             ending.withSelf = true;
             dialogueTrigger.dialogue = dialogueWithSelf;
+            endingHolder.withSelf = true;
             withSelfEnding.Invoke();
 
         }
@@ -47,6 +52,7 @@ public class CheckEndingHandler : MonoBehaviour
     public void EndingWithWitch()
     {
         ending.withWitch = true;
+        endingHolder.withWitch = true;
     }
 
 }

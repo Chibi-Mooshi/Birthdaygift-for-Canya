@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 684911c38e1ef8646a34d8d40414fb08, type: 2}
+      - m_Target: {fileID: 11400000, guid: 6873e27475ca1a24482fa1468871c007, type: 2}
         m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1
@@ -1343,6 +1343,30 @@ MonoBehaviour:
       - m_Target: {fileID: 741861330}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 866284710}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 094a528fbdc754c4dabdd3e93bc1b55b, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1904,8 +1928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488c222cc0889104abb763bdd132a9ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DruidSprite: {fileID: -7220940883511381222, guid: aedce37b22d47a14b95170f6c1610eab, type: 3}
-  WarriorSprite: {fileID: 4994781879666816834, guid: aedce37b22d47a14b95170f6c1610eab, type: 3}
+  DruidSprite: {fileID: 4994781879666816834, guid: aedce37b22d47a14b95170f6c1610eab, type: 3}
+  WarriorSprite: {fileID: -7220940883511381222, guid: aedce37b22d47a14b95170f6c1610eab, type: 3}
   choice: {fileID: 11400000, guid: f3d2622d8e574be4b9cec027db78a1bb, type: 2}
   player: {fileID: 0}
   shieldSpellFromWarrior: {fileID: 8194154006509717374, guid: 1abf875570d0b7f4da281bc4b2a91544, type: 3}
@@ -2357,7 +2381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 684911c38e1ef8646a34d8d40414fb08, type: 2}
+      - m_Target: {fileID: 11400000, guid: 6873e27475ca1a24482fa1468871c007, type: 2}
         m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1
@@ -2385,6 +2409,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: Interact
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 866284710}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2440,7 +2476,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2575867292471908338, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.000061
+      value: -5.000122
       objectReference: {fileID: 0}
     - target: {fileID: 2575867292863519394, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2496,7 +2532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5679904398192675656, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 114
+      value: 60.567
       objectReference: {fileID: 0}
     - target: {fileID: 8987312850208166196, guid: fc503cb4d02b703479618ec2d7e8271a, type: 3}
       propertyPath: m_IsActive
@@ -3219,7 +3255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6154416213144853890, guid: 26b9160117aec784e99c9e3c9d951b37, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19.999878
+      value: -19.999695
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26b9160117aec784e99c9e3c9d951b37, type: 3}
@@ -3369,6 +3405,7 @@ GameObject:
   - component: {fileID: 1718534277}
   - component: {fileID: 1718534279}
   - component: {fileID: 1718534278}
+  - component: {fileID: 1718534280}
   m_Layer: 5
   m_Name: BossHealhBarHandler
   m_TagString: Untagged
@@ -3451,6 +3488,34 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1718534280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718534276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306a44b99b491574aa2c072ad2037f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 094a528fbdc754c4dabdd3e93bc1b55b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1983485951}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1735854979
 GameObject:
@@ -3867,11 +3932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7833966215065512352, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.075165
+      value: -10.644257
       objectReference: {fileID: 0}
     - target: {fileID: 7833966215065512352, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82775116
+      value: -0.8184433
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acaf2962fac0ec84fa5706f668810887, type: 3}
@@ -4085,9 +4150,9 @@ RectTransform:
   m_Father: {fileID: 1316696978}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 34, y: -42}
   m_SizeDelta: {x: 1454, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934849743
@@ -4491,6 +4556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ending: {fileID: 11400000, guid: efe0a41e5ce7e29458ef9255169abe11, type: 2}
+  endingHolder: {fileID: 11400000, guid: 6335503f1b438c547b28da585353b2ad, type: 2}
   choice: {fileID: 11400000, guid: f3d2622d8e574be4b9cec027db78a1bb, type: 2}
   dialogueWithWarrior:
   - {fileID: 11400000, guid: e71cbf76ca858c34fbebc3a39aec60dc, type: 2}
@@ -4940,7 +5006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7493940523465451406, guid: 7df25f08724e9af4ba4b1596eb9923ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.06
+      value: -1.22
       objectReference: {fileID: 0}
     - target: {fileID: 7493940523465451406, guid: 7df25f08724e9af4ba4b1596eb9923ad, type: 3}
       propertyPath: m_LocalPosition.z

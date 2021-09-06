@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 819643801452671827}
   - component: {fileID: 4774540509553181677}
   - component: {fileID: 659728508107807881}
+  - component: {fileID: 6735391992591287834}
   m_Layer: 0
   m_Name: ProtectionSpellFromWarrior
   m_TagString: Untagged
@@ -63,7 +64,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.56, y: 5.08}
+    oldSize: {x: 2.52, y: 3.12}
     newSize: {x: 3.56, y: 5.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -111,9 +112,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 8869157785145750507, guid: 923e398064bfc744596ffd09640752a6, type: 3}
-  m_Color: {r: 0, g: 0.71025085, b: 1, a: 1}
+  m_SortingOrder: 20
+  m_Sprite: {fileID: 2882489628471905773, guid: f28409674cd9e514b9480fd3784cedfc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -123,3 +124,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6735391992591287834
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8194154006509717374}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b9bb3389a3d9fa4f85c5f19ec141074, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

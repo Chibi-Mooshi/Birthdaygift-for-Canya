@@ -25,13 +25,13 @@ MonoBehaviour:
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - myName: 
-    myText: 
+  - myName: Witch
+    myText: Alright, alright. Here, have your cat back...
     myVoice: {fileID: 0}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 11400000, guid: 684911c38e1ef8646a34d8d40414fb08, type: 2}
+        - m_Target: {fileID: 11400000, guid: 6873e27475ca1a24482fa1468871c007, type: 2}
           m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
           m_MethodName: Raise
           m_Mode: 1

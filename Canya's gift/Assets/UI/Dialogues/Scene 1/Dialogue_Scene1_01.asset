@@ -13,15 +13,33 @@ MonoBehaviour:
   m_Name: Dialogue_Scene1_01
   m_EditorClassIdentifier: 
   dialogueInfo:
+  - myName: Druid
+    myText: Please, listen to me. You do not have to hurt the beasts.
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
   - myName: Warrior
-    myText: We need to exterminate these beasts before anyone gets hurt.
+    myText: So I should just let them chase the village animals away and run through
+      out crops?
     myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
-    myText: It is not the beasts' fault. It is Outcast Witch who summoned them here.
-      They are confused and scared
+    myText: 'No, it is not their fault. They are panicked. '
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Druid
+    myText: The Outcast Witch summoned them here. She made them mad like this.
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: The Outcast Witch summoned them here. She made them mad like this.
     myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
