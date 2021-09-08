@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552cea2d4c10e094fa9544ef18cccf48, type: 3}
-  m_Name: EndingForMainMenuHolder
+  m_Script: {fileID: 11500000, guid: 2f3b3393614101542a0f89a4b7734e1e, type: 3}
+  m_Name: FadeOut
   m_EditorClassIdentifier: 
-  withWarrior: 0
-  withDruid: 0
-  withSelf: 0
-  withWitch: 0
+  description: 

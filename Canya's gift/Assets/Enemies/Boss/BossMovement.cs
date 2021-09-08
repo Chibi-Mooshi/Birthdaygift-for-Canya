@@ -20,6 +20,7 @@ public class BossMovement : MonoBehaviour
     private int currentSpellSummoned;
 
     private BossHealth bossHealth;
+    private Animator animator;
 
     //for timer
     [SerializeField]
@@ -27,12 +28,17 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private float timerToCastSpellsAtHalfHealth;
     private float elapsed;
 
+    private void Awake()
+    {
+        bossHealth = GetComponent<BossHealth>();
+        animator = GetComponent<Animator>();
+    }
+
     private void Start()
     {
         currentSpellSummoned = 0;
         castSpellShower();
 
-        bossHealth = GetComponent<BossHealth>();
     }
 
     public void Update()
@@ -62,15 +68,17 @@ public class BossMovement : MonoBehaviour
 
     public void castSpellShower()
     {
-
+       
       
         if (currentSpellSummoned < spellAmount)
         {
             for (int i = 0; i < 1; ++i)
             {
+                animator.SetTrigger("Attack");
                 GameObject spell;
                 spell = Instantiate(spellPrefabShower, transform.position, Quaternion.identity);
                 spell.transform.parent = transform;
+                animator.SetTrigger("Idle");
 
                 currentSpellSummoned++;
             } 
@@ -87,7 +95,9 @@ public class BossMovement : MonoBehaviour
 
     public void followSpell()
     {
+        animator.SetTrigger("Attack");
         Instantiate(spellPrefabFollow, transform.position, Quaternion.identity);
+        animator.SetTrigger("Idle");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

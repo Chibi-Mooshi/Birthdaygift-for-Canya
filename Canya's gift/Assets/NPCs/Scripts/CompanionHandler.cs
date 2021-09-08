@@ -3,23 +3,25 @@ using UnityEngine;
 public class CompanionHandler : MonoBehaviour
 {
 
-    public Sprite DruidSprite;
-    public Sprite WarriorSprite;
+    public GameObject DruidSprite;
+    public GameObject WarriorSprite;
 
     public ChoiceHolderScriptableObject choice;
-
-    private SpriteRenderer spriteRender;
 
     public GameObject player;
 
     public GameObject shieldSpellFromWarrior;
     public GameObject shieldSpellFromDruid;
 
+    private Animator druidAnimator;
+    private Animator warriorAnimator;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        spriteRender = GetComponent<SpriteRenderer>();
+        druidAnimator = DruidSprite.GetComponent<Animator>();
+        warriorAnimator = WarriorSprite.GetComponent<Animator>();
     }
 
 
@@ -27,10 +29,10 @@ public class CompanionHandler : MonoBehaviour
     {
        if (choice.hasDruid)
         {
-            spriteRender.sprite = DruidSprite;
+            DruidSprite.SetActive(true);
         } else if (choice.hasWarrior)
         {
-            spriteRender.sprite = WarriorSprite;
+            WarriorSprite.SetActive(true);
         } else
         {
             gameObject.SetActive(false);
@@ -53,15 +55,19 @@ public class CompanionHandler : MonoBehaviour
 
     private void DruidHandler()
     {
+        druidAnimator.SetTrigger("Protect");
        GameObject protectionSpell = Instantiate(shieldSpellFromDruid, new Vector2(player.transform.position.x, player.transform.position.y + 5), Quaternion.identity);
 
         protectionSpell.transform.parent = player.transform;
+        druidAnimator.SetTrigger("Idle");
     }
 
     private void WarriorHandler()
     {
-       GameObject protectionSpell = Instantiate(shieldSpellFromWarrior, player.transform.position, Quaternion.identity);
+        warriorAnimator.SetTrigger("Protect");
+        GameObject protectionSpell = Instantiate(shieldSpellFromWarrior, player.transform.position, Quaternion.identity);
         protectionSpell.transform.parent = player.transform;
+        warriorAnimator.SetTrigger("Idle");
     }
 
    

@@ -27,11 +27,14 @@ namespace UI
 
         [SerializeField] private Button optionsButton = default;
         [SerializeField] private Button quitGameButton = default;
+        [SerializeField] private Button restartLevelButton = default;
+
 
         [Header("Pause selection events")] [SerializeField]
         private UnityEvent onSelectResume = default;
 
         [SerializeField] private UnityEvent onSelectOptions = default;
+        [SerializeField] private UnityEvent onRestartLevel = default;
         [SerializeField] private UnityEvent onSelectQuit = default;
         [SerializeField] private UnityEvent onGameIsPaused = default;
 
@@ -103,6 +106,13 @@ namespace UI
             CallPauseMenuObjectSelection();
         }
 
+        public void Restartlevel()
+        {
+            Debug.Log("Load scene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       
+        }
+
         #endregion
 
 
@@ -113,11 +123,17 @@ namespace UI
             resumeGameButton.onClick.AddListener(InvokeResumeGame);
             optionsButton.onClick.AddListener(InvokeOptions);
             quitGameButton.onClick.AddListener(InvokeQuitGame);
+            restartLevelButton.onClick.AddListener(InvokeRestartLevel);
         }
 
         private void InvokeResumeGame()
         {
             onSelectResume.Invoke();
+        }
+
+        private void InvokeRestartLevel()
+        {
+            onRestartLevel.Invoke();
         }
 
         private void InvokeOptions()

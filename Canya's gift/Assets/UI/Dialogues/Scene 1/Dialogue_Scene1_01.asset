@@ -27,20 +27,106 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
-    myText: 'No, it is not their fault. They are panicked. '
+    myText: 'No, it is not their fault. They are merely panicking. '
     myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
-    myText: The Outcast Witch summoned them here. She made them mad like this.
+    myText: It was the Outcast Witch that lured them into the forest. They are just
+      scared.
     myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Warrior
-    myText: The Outcast Witch summoned them here. She made them mad like this.
+    myText: 'That does not make them any less dangerous. '
     myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
+  - myName: Warrior
+    myText: 'You deal with this in your way, and I will do it in mine. '
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Druid
+    myText: 'Fine. '
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: ..........
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: a1a13930615100043831f6870dbd86e2, type: 2}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Canya
+    myText: I wonder what that was about. Did they say monsters?
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: 'If I need to, I can use "1" and "2" to cast spells, and "3" to heal
+      myself if I am injured. '
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: 
+    myText: 
+    myVoice: {fileID: 0}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 2ea0cb92e7e746440ac832d446f8036d, type: 2}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 6873e27475ca1a24482fa1468871c007, type: 2}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
