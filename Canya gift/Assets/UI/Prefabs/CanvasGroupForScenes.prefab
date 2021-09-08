@@ -3073,7 +3073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2498617408185222235, guid: 58bbde12b3f2a9b4fa25e62d6935cca0, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 17.9535
+      value: 19.038
       objectReference: {fileID: 0}
     - target: {fileID: 2498617408185222235, guid: 58bbde12b3f2a9b4fa25e62d6935cca0, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3081,7 +3081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2498617408185222235, guid: 58bbde12b3f2a9b4fa25e62d6935cca0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 18.423294
+      value: 17.881
       objectReference: {fileID: 0}
     - target: {fileID: 2498617408185222237, guid: 58bbde12b3f2a9b4fa25e62d6935cca0, type: 3}
       propertyPath: m_Color.b

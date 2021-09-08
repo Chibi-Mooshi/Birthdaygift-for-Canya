@@ -23,7 +23,7 @@ public class SettingManager : MonoBehaviour
 
     public Toggle fullScreenToggle;
     public Dropdown resolutionDropdown;
-    public Dropdown texttureQualityDropdown;
+  //  public Dropdown texttureQualityDropdown;
     public Slider musicVolumeSlider;
 
     public Button ApplyButton;
@@ -43,7 +43,7 @@ public class SettingManager : MonoBehaviour
         //onvalueChanged.Addlistener --> whenever vlaue is changed, a listenr will react immediately
         fullScreenToggle.onValueChanged.AddListener(delegate { OnFullscreenToggle(); });
         resolutionDropdown.onValueChanged.AddListener(delegate { OnResolutionChange(); });
-        texttureQualityDropdown.onValueChanged.AddListener(delegate { onTextureQualityChange(); });
+       // texttureQualityDropdown.onValueChanged.AddListener(delegate { onTextureQualityChange(); });
         musicVolumeSlider.onValueChanged.AddListener(delegate { OnAudioChange(); });
 
         //ApplyButton.onClick.AddListener(delegate { OnApplyButtonClick(); });
@@ -71,10 +71,10 @@ public class SettingManager : MonoBehaviour
         resolutionValue = resolutionDropdown.value;
     }
 
-    public void onTextureQualityChange()
+   /* public void onTextureQualityChange()
     {
         QualitySettings.masterTextureLimit =  texttureQualityDropdown.value; 
-    }
+    } */
 
     public void OnAudioChange()
     {
@@ -94,13 +94,13 @@ public class SettingManager : MonoBehaviour
 
         gameSettings.musicVolume = audioSource.volume;
 
-        gameSettings.textureQuality = QualitySettings.masterTextureLimit;
+       // gameSettings.textureQuality = QualitySettings.masterTextureLimit;
     }
 
     public void LoadSettings()
     {
         musicVolumeSlider.value = gameSettings.musicVolume;
-        texttureQualityDropdown.value = gameSettings.textureQuality;
+      //  texttureQualityDropdown.value = gameSettings.textureQuality;
         resolutionDropdown.value = gameSettings.resolutionsIndex;
         fullScreenToggle.isOn = gameSettings.fullScreen;
 
