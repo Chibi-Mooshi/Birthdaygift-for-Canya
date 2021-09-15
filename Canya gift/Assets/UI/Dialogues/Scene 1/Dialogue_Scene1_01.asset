@@ -21,7 +21,7 @@ MonoBehaviour:
         m_Calls: []
   - myName: Warrior
     myText: So I should just let them chase the village animals away and run through
-      out crops?
+      our crops?
     myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:

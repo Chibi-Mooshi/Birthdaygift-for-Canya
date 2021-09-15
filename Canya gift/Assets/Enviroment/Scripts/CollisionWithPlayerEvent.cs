@@ -23,6 +23,7 @@ public class CollisionWithPlayerEvent : MonoBehaviour
             if (currentLevelCatScore >= scoreForLevel)
             {
                 ifAllCatsAreCollected.Invoke();
+                Time.timeScale = 0;
             } else
             {
                 Debug.Log("Not all cats have been collected");
