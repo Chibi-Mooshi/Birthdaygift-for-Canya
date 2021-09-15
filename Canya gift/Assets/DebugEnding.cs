@@ -4,6 +4,12 @@ public class DebugEnding : MonoBehaviour
 {
    public  CheckEndingScriptableObject ending;
 
+    public void HasWitch()
+    {
+        ending.withWitch = true;
+    }
+
+    /*
     public void Update()
     {
        if ( Input.GetKeyDown(KeyCode.F))
@@ -11,4 +17,5 @@ public class DebugEnding : MonoBehaviour
             ending.withWitch = true;
         }
     }
+    */
 }

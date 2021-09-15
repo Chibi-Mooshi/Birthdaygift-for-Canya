@@ -50,6 +50,11 @@ public class EnemyAttack : MonoBehaviour
 
         }
 
+        if (collision.gameObject.GetComponent<PlayerMovement>())
+        {
+            collision.gameObject.transform.SetParent(gameObject.transform);
+        }
+
     }
 
 
@@ -65,6 +70,12 @@ public class EnemyAttack : MonoBehaviour
                 isReadyToAttack = false;
             }
 
+        }
+
+
+        if (collision.gameObject.GetComponent<PlayerMovement>())
+        {
+            collision.gameObject.transform.SetParent(gameObject.transform);
         }
     }
 

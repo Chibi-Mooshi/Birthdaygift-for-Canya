@@ -80,4 +80,5 @@ MonoBehaviour:
   - {fileID: 8666474709973808079, guid: 451045e4a84e85e4eb4e491e29c78ff4, type: 3}
   maxSpawnInterval: 1
   minSpawnInterval: 4
+  spawnAmount: 40
   endPoint: {fileID: 171309457553666250}

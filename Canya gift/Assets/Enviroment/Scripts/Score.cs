@@ -25,10 +25,26 @@ public class Score : MonoBehaviour
     {
 
         currentScore++;
+
+        UpdateScore();
+    }
+
+    public void UpdateScore()
+    {
+        scoreScriptableObject.scoreAmount = currentScore;
+
+        scoreText.text = "Cats found: " + currentScore;
+
+        if (currentScore > 0)
+        {
+            ShowScore.Invoke();
+
+        }
     }
 
     public void Update()
     {
+        /*
         scoreScriptableObject.scoreAmount = currentScore;
 
         scoreText.text = "Cats found: " + currentScore;
@@ -38,7 +54,7 @@ public class Score : MonoBehaviour
             ShowScore.Invoke();
 
         }
-
+        */
     }
 
 }

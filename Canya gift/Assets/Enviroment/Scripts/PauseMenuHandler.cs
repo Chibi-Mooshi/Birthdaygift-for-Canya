@@ -37,6 +37,7 @@ namespace UI
         [SerializeField] private UnityEvent onRestartLevel = default;
         [SerializeField] private UnityEvent onSelectQuit = default;
         [SerializeField] private UnityEvent onGameIsPaused = default;
+        [SerializeField] private UnityEvent onGameIsUnPaused = default;
 
         [HideInInspector] public static bool gameIsPaused = false;
 
@@ -87,6 +88,8 @@ namespace UI
 
             Time.timeScale = scaleOfTime;
             AudioListener.pause = false;
+
+            onGameIsUnPaused.Invoke();
         }
 
         public void Pause()

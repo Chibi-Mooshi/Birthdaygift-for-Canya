@@ -5,6 +5,7 @@ using UnityEngine;
 public class CloudGenerator : MonoBehaviour
 {
 
+
     [SerializeField]
     GameObject[] clouds;
 
@@ -13,6 +14,8 @@ public class CloudGenerator : MonoBehaviour
 
     [SerializeField]
     float minSpawnInterval;
+
+    [SerializeField] int spawnAmount = 10;
 
     [SerializeField]
     GameObject endPoint;
@@ -60,9 +63,9 @@ public class CloudGenerator : MonoBehaviour
 
     void PreSpawnClouds()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < spawnAmount; i++)
         {
-            Vector3 spawnPos = startPos + Vector3.right * (i * 10);
+            Vector3 spawnPos = startPos + Vector3.right * (i * 5);
             SpawnCloud(spawnPos);
         }
     }
