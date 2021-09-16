@@ -50,11 +50,6 @@ public class EnemyAttack : MonoBehaviour
 
         }
 
-        if (collision.gameObject.GetComponent<PlayerMovement>())
-        {
-            collision.gameObject.transform.SetParent(gameObject.transform);
-        }
-
     }
 
 
@@ -73,18 +68,6 @@ public class EnemyAttack : MonoBehaviour
         }
 
 
-        if (collision.gameObject.GetComponent<PlayerMovement>())
-        {
-            collision.gameObject.transform.SetParent(gameObject.transform);
-        } 
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<PlayerMovement>())
-        {
-            collision.gameObject.transform.SetParent(null);
-        }
     }
 
 }
