@@ -10,14 +10,14 @@ public class StartGame : MonoBehaviour
 
     [Header("Pause menu buttons")]
     [SerializeField] private Button startGameButton = default;
-    [SerializeField] private Button optionsButton = default;
+  //  [SerializeField] private Button optionsButton = default;
     [SerializeField] private Button quitGameButton = default;
 
     [Header("Pause selection events")]
     [SerializeField]
     private UnityEvent onSelectStart = default;
 
-    [SerializeField] private UnityEvent onSelectOptions = default;
+    //[SerializeField] private UnityEvent onSelectOptions = default;
     [SerializeField] private UnityEvent onSelectQuit = default;
 
     [HideInInspector] public static bool gameIsPaused = false;
@@ -36,7 +36,7 @@ public class StartGame : MonoBehaviour
     private void AddPauseMenuButtonListener()
     {
         startGameButton.onClick.AddListener(InvokeStartGame);
-        optionsButton.onClick.AddListener(InvokeOptions);
+       // optionsButton.onClick.AddListener(InvokeOptions);
         quitGameButton.onClick.AddListener(InvokeQuitGame);
     }
 
@@ -45,10 +45,11 @@ public class StartGame : MonoBehaviour
         onSelectStart.Invoke();
     }
 
+    /*
     private void InvokeOptions()
     {
         onSelectOptions.Invoke();
-    }
+    } */
 
     private void InvokeQuitGame()
     {

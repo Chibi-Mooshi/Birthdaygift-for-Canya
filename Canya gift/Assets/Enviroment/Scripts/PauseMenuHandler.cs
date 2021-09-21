@@ -79,7 +79,7 @@ namespace UI
 
             gameIsPaused = false;
 
-            //PauseMenuPanelObject.SetActive(false);
+            PauseMenuPanelObject.SetActive(false);
             //pauseMenuCanvas.enabled = false;
             //pauseMenuCanvasGroup.blocksRaycasts = false;
 

@@ -11,14 +11,20 @@ public class Score : MonoBehaviour
     private int currentScore;
     private int maxScore;
 
+    private int allCatsInLevel;
+
     public ScoreScriptableObject scoreScriptableObject;
+    private GameObject[] cats;
 
     private void Start()
     {
         scoreText = GetComponent<Text>();
 
         currentScore = 0;
-        
+
+        cats = GameObject.FindGameObjectsWithTag("Cat");
+        allCatsInLevel = cats.Length;
+
     }
 
     public void IncreaseScore()
@@ -33,7 +39,7 @@ public class Score : MonoBehaviour
     {
         scoreScriptableObject.scoreAmount = currentScore;
 
-        scoreText.text = "Cats found: " + currentScore;
+        scoreText.text = "Cats found: " + currentScore + " out of " + allCatsInLevel;
 
         if (currentScore > 0)
         {

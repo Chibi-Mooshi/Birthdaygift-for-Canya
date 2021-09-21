@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552cea2d4c10e094fa9544ef18cccf48, type: 3}
   m_Name: Ending
   m_EditorClassIdentifier: 
-  ending: 0
+  withWarrior: 0
+  withDruid: 0
+  withSelf: 0
+  withWitch: 0
