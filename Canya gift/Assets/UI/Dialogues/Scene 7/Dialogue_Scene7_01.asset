@@ -20,11 +20,72 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - myName: Witch
-    myText: Prepare to die!
+    myText: Ah, silly peasent, I suppose you are here to scold me for accidently
+      summoning the beasts. Or send me further into the bog!
     myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
+  - myName: Outcast Witch
+    myText: Actually-
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Outcast Witch
+    myText: No, you need to get out of my bog!
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - myName: Canya
     myText: '!!!'
     myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}

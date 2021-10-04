@@ -14,20 +14,140 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueInfo:
   - myName: Druid
-    myText: Hello! I am druid
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myText: 'Halt, you there!
+
+'
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
-    myText: 'Bla bla bla '
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myText: "Ah excuse me, I have been seeing you a few times in the woods. \r\n"
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
-    myText: Can I come along?
+    myText: What are you doing out here? It is rather dangerous with all these beasts
+      around.
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: "I know, but I am looking for my cats. I think the beasts might have
+      scared them throughout the woods. \r\n"
     myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Druid
+    myText: 'Ah, yes. I have seen you go around and collect those sweet creatures.
+
+'
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Druid
+    myText: 'The beasts scattered your dear cats to the winds, yet you have not hurt
+      any of the beasts.
+
+'
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: "Why would I? The beasts must be just as terrified as my cats. \r\n"
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Druid
+    myText: Ah, that is just how I feel!
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Druid
+    myText: "You know, I saw a cat by the Outcast Witch's side. I never thought she
+      was a cat-person. \r\n"
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Canya
+    myText: "That might be one of mine! I am missing only one and my cat-sense is
+      saying there is only one ahead. \r\n"
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - myName: Druid
+    myText: "Do you want me to come along and help you? The Outcast Witch is a dangerous
+      foe. \r\n"
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls:

@@ -12,4 +12,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f26cbca438af54b81f06257d4d9391, type: 3}
   m_Name: DialogueForWarriorIntroduction 1
   m_EditorClassIdentifier: 
-  dialogueInfo: []
+  dialogueInfo:
+  - myName: Warrior
+    myText: Halt, who goes there?
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: "Ah, I recognize you. I have seen you move through these woods. \r\n"
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: "What are you doing out here? This is no place for a such a cute witch.
+      \r\n\n"
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: "I am looking for my cats. I think the beasts might have scared them
+      throughout the woods. \r\n\n"
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: 'Ah, yes. I have seen you go around and collect those sweet creatures.
+
+
+'
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: Rather well done.
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: "You have been faring yourself rather well against the wild beasts. \r\n\r\n"
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: "Nothing can stand between my cats and I. \n"
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: 'What a lovely sense of justice!
+
+'
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: 'You know, I saw a cat by the Outcast Witch''s side. Perhaps it is yours?
+
+'
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Canya
+    myText: "It might be! I am missing only one and my cat-sense is saying there
+      is only one ahead. \r\n"
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - myName: Warrior
+    myText: "Can I come along on your quest? The Outcast Witch is a dangerous foe.
+      \r\n"
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
+    dialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: f219074dd360d8049a2fd1c65c081856, type: 2}
+          m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+          m_MethodName: Raise
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
