@@ -1848,7 +1848,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGameButton: {fileID: 1336680585}
-  optionsButton: {fileID: 0}
   quitGameButton: {fileID: 746544157}
   onSelectStart:
     m_PersistentCalls:
@@ -1877,9 +1876,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onSelectOptions:
-    m_PersistentCalls:
-      m_Calls: []
   onSelectQuit:
     m_PersistentCalls:
       m_Calls:
