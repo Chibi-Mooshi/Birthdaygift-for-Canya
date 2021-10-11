@@ -15,45 +15,45 @@ MonoBehaviour:
   dialogueInfo:
   - myName: Druid
     myText: Please, listen to me. You do not have to hurt the beasts.
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Warrior
     myText: So I should just let them chase the village animals away and run through
       our crops?
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
     myText: 'No, it is not their fault. They are merely panicking. '
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
     myText: It was the Outcast Witch that lured them into the forest. They are just
       scared.
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Warrior
     myText: 'That does not make them any less dangerous. '
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Warrior
     myText: 'You deal with this in your way, and I will do it in mine. '
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
     myText: 'Fine. '
-    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []

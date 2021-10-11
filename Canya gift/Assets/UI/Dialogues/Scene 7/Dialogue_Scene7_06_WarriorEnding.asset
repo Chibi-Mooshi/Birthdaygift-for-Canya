@@ -15,38 +15,38 @@ MonoBehaviour:
   dialogueInfo:
   - myName: Warrior
     myText: Good job! You carried yourself well in battle.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Canya
     myText: Thank you for helping me. You really saved me back there.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Warrior
     myText: I am only happy to be of help.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Canya
     myText: If you have the time, perhaps you would like to accompany back to my
       cottage?
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Canya
     myText: For a cup of tea, that is
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Warrior
     myText: I would love to!
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: 3fb8b341fd7dbdb44a796058069bd72a, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []

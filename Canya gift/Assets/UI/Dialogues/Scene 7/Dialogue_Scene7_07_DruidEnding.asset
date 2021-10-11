@@ -21,38 +21,38 @@ MonoBehaviour:
         m_Calls: []
   - myName: Druid
     myText: Are you alright? Are you hurt?
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Canya
     myText: I am fine, do not worry. Thank you for helping me out.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
     myText: 'I am only happy to be of service. '
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Canya
     myText: If you have the time, perhaps you would like to accompany back to my
       cottage?
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Canya
     myText: For a cup of tea, that is.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Druid
     myText: A cup of tea would certainly be lovely about now.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: 4d90f6f2c592694449e278ab62d64536, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls:

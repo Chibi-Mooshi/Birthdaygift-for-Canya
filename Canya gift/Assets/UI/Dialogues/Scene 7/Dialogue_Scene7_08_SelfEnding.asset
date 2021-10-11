@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueInfo:
   - myName: Canya
     myText: Oh, sweet kitten, are you alright? Did that mean witch hurt you?
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -25,15 +25,15 @@ MonoBehaviour:
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - myName: Warrior
+  - myName: Canya
     myText: This is the last cat! I am so happy I managed to get all of them.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
   - myName: Canya
     myText: Come on, kittens. Let us head home.
-    myVoice: {fileID: 0}
+    myVoice: {fileID: 8300000, guid: ab7d00803aa9c744386c04e48f3bcef4, type: 3}
     dialogueEvent:
       m_PersistentCalls:
         m_Calls: []
