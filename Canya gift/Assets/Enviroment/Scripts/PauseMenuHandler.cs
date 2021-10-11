@@ -36,7 +36,9 @@ namespace UI
         [SerializeField] private UnityEvent onRestartLevel = default;
         [SerializeField] private UnityEvent onSelectQuit = default;
         [SerializeField] private UnityEvent onGameIsPaused = default;
-       // [SerializeField] private UnityEvent onGameIsUnPaused = default;
+        // [SerializeField] private UnityEvent onGameIsUnPaused = default;
+
+        [SerializeField] private UnityEvent onGameUnpaused = default;
 
         [HideInInspector] public static bool gameIsPaused = false;
 
@@ -79,6 +81,8 @@ namespace UI
 
             gameIsPaused = false;
 
+            onGameUnpaused.Invoke();
+
             PauseMenuPanelObject.SetActive(false);
             //pauseMenuCanvas.enabled = false;
             //pauseMenuCanvasGroup.blocksRaycasts = false;
@@ -87,6 +91,7 @@ namespace UI
 
             Time.timeScale = scaleOfTime;
             AudioListener.pause = false;
+
 
           //  onGameIsUnPaused.Invoke();
         }

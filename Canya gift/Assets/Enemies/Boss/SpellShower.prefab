@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4865912460403304178}
   - component: {fileID: 3552520515655804778}
   - component: {fileID: 2166412005740059745}
+  - component: {fileID: 558367956158162274}
   m_Layer: 0
   m_Name: SpellShower
   m_TagString: Untagged
@@ -235,3 +236,31 @@ MonoBehaviour:
   endEffect: {fileID: 7027080328654196048, guid: ef796b9f436370b4aa293bfa9decae05, type: 3}
   speed: 1
   damage: 20
+--- !u!114 &558367956158162274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753879034341729533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306a44b99b491574aa2c072ad2037f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 3f46641b29e76de429311d1f503956c4, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4753879034341729533}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
