@@ -14,6 +14,15 @@ public class FadeScript : MonoBehaviour
 
    void fadeout()
     {
-        image.CrossFadeAlpha(0, 6, false);
+        image.CrossFadeAlpha(0, 5, false);
+        Invoke("HideFadePanel", 5);
+
     }
+
+    public void HideFadePanel()
+    {
+        image.enabled = false;
+    }
+
+    
 }
